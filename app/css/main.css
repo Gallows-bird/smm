@@ -1,10 +1,15 @@
 body {
-  font-family: 'Exo 2', sans-serif; }
+  font-family: 'Exo 2', sans-serif;
+  background-color: #f7f5ff; }
 
 button,
 button:active,
 button:focus {
   outline: none; }
+
+.btn.focus, .btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none; }
 
 .page-header {
   background-color: #373544;
@@ -134,14 +139,15 @@ button:focus {
   .other-nav {
     padding-left: 0; } }
 
-.page-wrapper {
+.index-main {
   background-image: url(../img/index2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh; }
+  height: 100vh;
+  background-color: rgba(55, 53, 68, 0.004); }
 
-.index-main {
+.index-section {
   color: #ffffff;
   padding-top: 280px; }
 
@@ -152,10 +158,6 @@ button:focus {
   font-size: 48px;
   text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.2); }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 .index-top {
   display: none; }
 
@@ -168,7 +170,6 @@ button:focus {
   line-height: 1.3;
   text-shadow: rgba(119, 119, 119, 0.5) 0px 2px 0px; }
 
-<<<<<<< HEAD
 .white-hr {
   background-color: #fff; }
 
@@ -178,26 +179,15 @@ button:focus {
   width: 100%;
   margin: 24px 0; }
 
-=======
-hr {
-  background-color: #fff; }
-
->>>>>>> 4b6ebce07dff99bc8449a77a2793634f8215c47e
 .btn-index-start {
   text-transform: uppercase;
   background-color: #fff;
   border: 1px solid #ffffff;
-<<<<<<< HEAD
   padding: 15px 50px;
   font-size: 16px;
   font-weight: 700;
   width: auto;
   border-radius: 50px;
-=======
-  padding: 10px 50px;
-  font-size: 16px;
-  font-weight: 700;
->>>>>>> 4b6ebce07dff99bc8449a77a2793634f8215c47e
   letter-spacing: 5px;
   color: #373544;
   -webkit-transition: 0.4s;
@@ -205,43 +195,17 @@ hr {
   transition: 0.4s; }
   .btn-index-start:hover {
     background-color: rgba(255, 255, 255, 0.1);
-<<<<<<< HEAD
     color: #fff;
     text-decoration: none; }
-=======
-    color: #fff; }
-
-.btn-index-free {
-  border: 1px solid #ffffff;
-  color: #fff;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 5px 40px;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-  background-color: rgba(255, 255, 255, 0.1); }
-  .btn-index-free:hover {
-    background-color: white;
-    color: #373544; }
->>>>>>> 4b6ebce07dff99bc8449a77a2793634f8215c47e
 
 .index-bottom {
   display: block; }
 
-<<<<<<< HEAD
-=======
-.btn {
-  width: auto;
-  border-radius: 50px; }
-
->>>>>>> 4b6ebce07dff99bc8449a77a2793634f8215c47e
 .index-btn-top {
   text-align: center;
   margin-top: 100px;
   opacity: 0; }
 
-<<<<<<< HEAD
 .modal-content {
   border-radius: 15px;
   max-width: 380px;
@@ -351,25 +315,3 @@ hr {
   .price-tab-link {
     padding: 10px 10px;
     font-size: 14px; } }
-=======
-.index-btn-bottom {
-  text-align: center;
-  margin-top: 40px;
-  display: none; }
->>>>>>> 4b6ebce07dff99bc8449a77a2793634f8215c47e
-=======
-hr {
-  background-color: #fff; }
->>>>>>> parent of 148a755... price
-=======
-hr {
-  background-color: #fff; }
->>>>>>> parent of 148a755... price
-=======
-hr {
-  background-color: #fff; }
->>>>>>> parent of 148a755... price
-=======
-hr {
-  background-color: #fff; }
->>>>>>> parent of 148a755... price

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:100,400,600,700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- modal -->
+    <div class="modal fade" id="entryModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-entry">
+                <div class="modal-title">Войти</div>
+                <hr class="grey-hr">
+                <form action="" id="loginModalForm" method="post">
+                    <input type="text" name="login" class="form-control" placeholder="Логин" required>
+                    <input type="password" name="password" class="form-control" placeholder="Пароль" required>
+                    <hr class="grey-hr">
+                    <div class="form-group">
+                        <button type="submit" class="btn" name="submit">Войти</button>
+                    </div>
+                    <hr class="grey-hr">
+                    <div class="text-center">
+                        <a href="#" class="reset-link">Забыли пароль?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="registrModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-registr">
+                <div class="modal-title">Регистрация</div>
+                <hr class="grey-hr">
+                <form action="" id="registrModalForm" method="post">
+                    <input type="text" name="login" class="form-control" placeholder="Логин" required>
+                    <input type="email" name="mail" class="form-control" placeholder="Почта" required>
+                    <input type="password" name="password" class="form-control" placeholder="Пароль" required>
+                    <input type="password" name="re-password" class="form-control" placeholder="Повторите пароль"
+                        required>
+                    <hr class="grey-hr">
+                    <div class="form-group">
+                        <button type="submit" class="btn" name="submit2">Регистрация</button>
+                    </div>
+                    <hr class="grey-hr">
+                    <div class="text-center">
+                        <a href="#" class="reset-link">Уже зарегистрированы?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- modal-end -->
+    <header class="page-header">
+        <nav class=" navbar navbar-expand-lg">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logo2.png" alt="Лого" width="180" height="50">
+            </a>
+            <button class="navbar-toggler nav-toggle" type="button" data-toggle="collapse" data-target="#main-nav">
+                <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav user-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#entryModal">Войти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#registrModal">Регистрация</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav other-nav">
+                    <li class="nav-item">
+                        <a href="price.html" class="nav-link">Прайс</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="page-content">
+        <div class="container">
+            <h1 class="page-title">Цены на услуги</h1>
+            <p class="page-sub-title">У нас самые низкие цены! Накрутка подписчиков, лайков и просмотров от 50 коп!</p>
+            <hr class="grey-hr">
+            <div class="panel order-panel">
+                <div class="order-tab">
+                    <a href="#" class="price-tab-link price-tab-inst">
+                        Instagram
+                    </a>
+                </div>
+                <div class="order-tab">
+                    <a href="#" class="price-tab-link price-tab-vk">
+                        Вконтакте
+                    </a>
+                </div>
+                <div class="order-tab">
+                    <a href="#" class="price-tab-link price-tab-youtube">
+                        YouTube
+                    </a>
+                </div>
+                <div class="order-tab">
+                    <a href="#" class="price-tab-link price-tab-telegram">
+                        Telegram
+                    </a>
+                </div>
+                <div class="order-tab">
+                    <a href="#" class="price-tab-link price-tab-other">
+                        Разное
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

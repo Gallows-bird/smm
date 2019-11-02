@@ -30,10 +30,15 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 	});
 });
 
-gulp.task('scripts', function() {
-	return gulp.src('app/js/main.js')
-		.pipe(browserSync.reload({ stream: true }))
-});
+// gulp.task('scripts', function() {
+// 	return gulp.src([ // Берем все необходимые библиотеки
+// 		'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
+// 		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
+// 		])
+// 		.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
+// 		.pipe(uglify()) // Сжимаем JS файл
+// 		.pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
+// });
 
 gulp.task('code', function() {
 	return gulp.src('app/*.html')
@@ -89,7 +94,7 @@ gulp.task('clear', function (callback) {
 gulp.task('watch', function() {
 	gulp.watch('app/sass/**/*.sass', gulp.parallel('sass')); // Наблюдение за sass файлами
 	gulp.watch('app/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
-	gulp.watch('app/js/main.js', gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
+	// gulp.watch(['app/js/common.js', 'app/libs/**/*.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
 });
-gulp.task('default', gulp.parallel('sass', 'scripts', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('sass', 'browser-sync', 'watch'));
 gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass'));

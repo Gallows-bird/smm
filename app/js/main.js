@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 $(document).ready(function() {
 
 <<<<<<< HEAD
@@ -33,6 +34,10 @@ $(document).ready(function() {
             opacity: 1
         }, 1000);
 >>>>>>> 4b6ebce07dff99bc8449a77a2793634f8215c47e
+=======
+$('.nav-toggle').on('click', function() {
+    $(this).toggleClass('nav-toggle--active');
+>>>>>>> parent of 148a755... price
 =======
 $('.nav-toggle').on('click', function() {
     $(this).toggleClass('nav-toggle--active');

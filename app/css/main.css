@@ -322,8 +322,6 @@ button:focus {
   .order-tab:nth-child(1), .order-tab:nth-child(2) {
     width: 50%;
     border-bottom: 1px solid #ececec; }
-  .price-tab-vk {
-    border-right: none; }
   .order-tab:nth-child(n+3) {
     width: 33.33333%; }
   .price-tab-link {
@@ -334,10 +332,13 @@ button:focus {
   margin-top: 50px;
   font-size: 14px; }
 
-.price-tab {
-  overflow: hidden; }
+.table {
+  display: table;
+  margin-bottom: 0; }
 
-.price-tab .table thead tr th {
+.price-tab .table thead tr th,
+.price-tab .table tbody tr th,
+.price-tab .table tbody tr td {
   border-top: none;
   border-bottom: none;
   padding: 15px; }
@@ -347,3 +348,27 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 
 table > thead > tr > th {
   border-left: none; }
+
+.price-tab.active {
+  display: block; }
+
+.price-tab.hide {
+  display: none; }
+
+.faded {
+  -webkit-animation-name: faded;
+          animation-name: faded;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s; }
+
+@-webkit-keyframes faded {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes faded {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

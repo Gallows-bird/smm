@@ -1,9 +1,9 @@
 body
     font-family: 'Exo 2', sans-serif
-    background-color: #f7f5ff;
+    background-color: #f7f5ff
 
-button, 
-button:active, 
+button,
+button:active,
 button:focus
     outline: none
 
@@ -75,7 +75,7 @@ button:focus
     text-align: center
     &:hover
         color: #fff
-        background-color: #2C2B33;
+        background-color: #2C2B33
         transition: all 0.3s
 
 .navbar-collapse
@@ -147,7 +147,7 @@ button:focus
     color: #373544
     transition: 0.4s
     &:hover
-        background-color:  rgba(255, 255, 255, 0.1)
+        background-color: rgba(255, 255, 255, 0.1)
         color: #fff
         text-decoration: none
 
@@ -175,7 +175,7 @@ button:focus
 
 .index-top
     display: none
-    
+
 .white-hr
     background-color: #fff
 
@@ -286,9 +286,6 @@ button:focus
         width: 50%
         border-bottom: 1px solid #ececec
 
-    .price-tab-vk
-        border-right: none
-
     .order-tab:nth-child(n+3)
         width: 33.33333%
 
@@ -300,11 +297,13 @@ button:focus
     margin-top: 50px
     font-size: 14px
 
-.price-tab
-    overflow: hidden
+.table
+    display: table
+    margin-bottom: 0
 
-
-.price-tab .table thead tr th
+.price-tab .table thead tr th,
+.price-tab .table tbody tr th,
+.price-tab .table tbody tr td
     border-top: none
     border-bottom: none
     padding: 15px
@@ -314,3 +313,20 @@ table>thead>tr>th, table>thead>tr>td, table>tbody>tr>th, table>tbody>tr>td, tabl
 
 table>thead>tr>th
     border-left: none
+
+.price-tab.active
+    display: block
+
+.price-tab.hide
+    display: none
+
+.faded 
+    animation-name: faded
+    animation-duration: 0.5s
+
+@keyframes faded
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+        

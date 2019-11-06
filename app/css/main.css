@@ -269,7 +269,11 @@ button:focus {
 .page-title {
   font-size: 48px;
   color: #333;
-  text-align: center; }
+  text-align: center;
+  -webkit-animation-name: faded;
+          animation-name: faded;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s; }
 
 .page-content {
   padding-top: 110px;
@@ -281,7 +285,11 @@ button:focus {
   text-transform: uppercase;
   letter-spacing: 1.1px;
   color: #666;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  -webkit-animation-name: faded;
+          animation-name: faded;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s; }
 
 .panel {
   background-color: #fff;
@@ -409,3 +417,75 @@ table > thead > tr > th {
   .contacts-email-link:hover {
     text-decoration: none;
     color: #333; }
+
+.auth-top {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.auth-item {
+  width: 50%;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ececec; }
+  .auth-item:first-child {
+    border-right: 1px solid #ececec; }
+
+.auth-item-link {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700; }
+  .auth-item-link:hover {
+    text-decoration: none;
+    color: #000000; }
+
+.auth-form .form-control:last-of-type {
+  margin-bottom: 24px; }
+
+.auth-inp-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #a9a9a9;
+  margin-bottom: 4px; }
+
+.auth-inner {
+  padding: 0 40px 40px 40px; }
+
+.auth-bottom-link {
+  display: block;
+  text-align: center; }
+
+.auth-panel {
+  margin-top: 24px;
+  -webkit-animation-name: auth-fade;
+          animation-name: auth-fade;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s; }
+
+@-webkit-keyframes auth-fade {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+
+@keyframes auth-fade {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }

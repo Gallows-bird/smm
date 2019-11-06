@@ -241,6 +241,8 @@ button:focus
     font-size: 48px
     color: #333
     text-align: center
+    animation-name: faded
+    animation-duration: 1.5s
 
 .page-content
     padding-top: 110px
@@ -253,6 +255,8 @@ button:focus
     letter-spacing: 1.1px
     color: #666
     margin-bottom: 50px
+    animation-name: faded
+    animation-duration: 1.5s
 
 .panel
     background-color: #fff
@@ -320,7 +324,7 @@ table>thead>tr>th
 .price-tab.hide
     display: none
 
-.faded 
+.faded
     animation-name: faded
     animation-duration: 0.5s
 
@@ -331,7 +335,6 @@ table>thead>tr>th
     100%
         opacity: 1
 
-        
 .panel-contacts
     padding: 40px
 
@@ -367,4 +370,55 @@ table>thead>tr>th
     &:hover
         text-decoration: none
         color: #333
-        
+
+.auth-top
+    list-style: none
+    padding: 0
+    display: flex
+    justify-content: space-between
+
+.auth-item
+    width: 50%
+    text-align: center
+    padding-top: 20px
+    padding-bottom: 20px
+    border-bottom: 1px solid #ececec
+    &:first-child
+        border-right: 1px solid #ececec
+
+.auth-item-link
+    color: #000000
+    font-size: 14px
+    font-weight: 700
+    &:hover
+        text-decoration: none
+        color: #000000
+
+.auth-form .form-control:last-of-type
+    margin-bottom: 24px
+
+.auth-inp-label
+    font-size: 12px
+    font-weight: 700
+    color: #a9a9a9
+    margin-bottom: 4px
+
+.auth-inner
+    padding: 0 40px 40px 40px
+
+.auth-bottom-link
+    display: block
+    text-align: center
+
+.auth-panel
+    margin-top: 24px
+    animation-name: auth-fade
+    animation-duration: 0.8s
+
+@keyframes auth-fade
+    0%
+        transform: scale(0)
+        opacity: 0
+    100%
+        transform: scale(1)
+        opacity: 1

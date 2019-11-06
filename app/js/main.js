@@ -11,7 +11,8 @@ $(document).ready(function() {
     });
 
 
-    $('.index-top').fadeIn(800);
+    $('.index-top').fadeIn(1500);
+    // $('.auth-panel').fadeIn(500);
 
 
     $(function() {

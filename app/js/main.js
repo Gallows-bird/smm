@@ -1,12 +1,18 @@
 $(document).ready(function() {
 
-    $(function() {
-        var burgerAnimate = $('.nav-toggle').on('click', function() {
-            $(this).toggleClass('nav-toggle--active');
-        });
+    var burgerAnimate = $('.nav-toggle');
+
+    $('#main-nav').on('show.bs.collapse', function() {
+        burgerAnimate.addClass('nav-toggle--active');
     });
 
+    $('#main-nav').on('hide.bs.collapse', function() {
+        burgerAnimate.removeClass('nav-toggle--active');
+    });
+
+
     $('.index-top').fadeIn(800);
+
 
     $(function() {
         var indexBtnTop = $('.index-btn-top');
@@ -15,6 +21,7 @@ $(document).ready(function() {
             opacity: 1
         }, 800);
     });
+
 
     var tab = document.querySelectorAll('.order-tab'),
         headerTab = document.querySelector('.order-panel'),

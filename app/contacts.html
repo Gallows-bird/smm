@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:100,400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- modal -->
+    <div class="modal fade" id="entryModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-entry">
+                <div class="modal-title">Войти</div>
+                <hr class="grey-hr">
+                <form action="" id="loginModalForm" method="post">
+                    <input type="text" name="login" class="form-control" placeholder="Логин" required>
+                    <input type="password" name="password" class="form-control" placeholder="Пароль" required>
+                    <hr class="grey-hr">
+                    <div class="form-group">
+                        <button type="submit" class="btn" name="submit">Войти</button>
+                    </div>
+                    <hr class="grey-hr">
+                    <div class="text-center">
+                        <a href="#" class="reset-link">Забыли пароль?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="registrModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-registr">
+                <div class="modal-title">Регистрация</div>
+                <hr class="grey-hr">
+                <form action="" id="registrModalForm" method="post">
+                    <input type="text" name="login" class="form-control" placeholder="Логин" required>
+                    <input type="email" name="mail" class="form-control" placeholder="Почта" required>
+                    <input type="password" name="password" class="form-control" placeholder="Пароль" required>
+                    <input type="password" name="re-password" class="form-control" placeholder="Повторите пароль" required>
+                    <hr class="grey-hr">
+                    <div class="form-group">
+                        <button type="submit" class="btn" name="submit2">Регистрация</button>
+                    </div>
+                    <hr class="grey-hr">
+                    <div class="text-center">
+                        <a href="#" class="reset-link">Уже зарегистрированы?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- modal-end -->
+    <header class="page-header">
+        <nav class=" navbar navbar-expand-lg">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logo2.png" alt="Лого" width="180" height="50">
+            </a>
+            <button class="navbar-toggler nav-toggle" type="button" data-toggle="collapse" data-target="#main-nav">
+                <span></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav user-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#entryModal">Войти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#registrModal">Регистрация</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav other-nav">
+                    <li class="nav-item">
+                        <a href="price.html" class="nav-link">Прайс</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Новости</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="page-wrapper">
+        <div class="page-content">
+            <div class="container">
+                <h1 class="page-title">Связь с нами</h1>
+                <p class="page-sub-title">Если у вас возникла проблема с накруткой, свяжитесь с нами и мы поможем
+                </p>
+                <hr class="grey-hr">
+                <div class="panel panel-contacts">
+                    <p class="contacts-title text-center">
+                        Режим работы поддержки:<br> с 10:00 до 23:00 (по московскому времени)
+                    </p>
+                    <hr class="grey-hr">
+                    <div class="contacts-info">
+                        <div class="contacts-list-title">
+                            Если у вас проблемы с заказом:
+                        </div>
+                        <ul class="contacts-list">
+                            <li class="contacts-list-item">Прочтите описание к услуге, возможно вы не обратили внимание на время запуска и скорость накрутки</li>
+                            <li class="contacts-list-item">Обратите внимание на последние новости, возможно услуга в данный момент на ремонте, либо идут обновления</li>
+                        </ul>
+                        <div class="contacts-list-title">
+                            Главные правила:
+                        </div>
+                        <ul class="contacts-list">
+                            <li class="contacts-list-item">Во время накрутки ваш аккаунт должен быть открытым, а логин/ник/адрес страницы не должен изменяться! Иначе задание будет выполнено в пустую, без возврата средств!</li>
+                            <li class="contacts-list-item">Запрещается одновременный запуск однотипных услуг на одну ссылку или же накрутка с помощью разных сайтов/сервисов! Это приведет к недокруту, без возврата средств!</li>
+                        </ul>
+                        <div class="contacts-list-title">
+                            Еще пару правил:
+                        </div>
+                        <ul class="contacts-list">
+                            <li class="contacts-list-item">Отмена заказов не возможна! Исключение: автоуслуги и услуги у которых есть кнопка отмены. В случае зависания заказ будет выполнен или отменен автоматически в течение 0-240 часов</li>
+                            <li class="contacts-list-item">Мы не консультируем по вопросам накрутки. Если вы не разбираетесь в тонкостях этого процесса, то воспользуйтесь услугами специалиста, либо собирайте информацию на тематических форумах</li>
+                        </ul>
+                        <div class="contacts-list-title">
+                            Если остались вопросы:
+                        </div>
+                        <ul class="contacts-list">
+                            <li class="contacts-list-item">Просьба относиться уважительно, проявляя терпение, иначе есть вероятность попасть в черный список или в бан</li>
+                            <li class="contacts-list-item">Поддержка отвечает в течение 24 часов, в порядке очереди (обычно быстрее)</li>
+                            <li class="contacts-list-item">В сообщении пишите сразу всю суть проблемы, указывая номер заказа!</li>
+                        </ul>
+                    </div>
+                    <hr class="grey-hr">
+                    <span class="contacts-email">• Email: <a href="#" class="contacts-email-link">sample@gmail.com</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

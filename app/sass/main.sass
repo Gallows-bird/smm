@@ -33,7 +33,7 @@ button:focus
     position: absolute
     top: 50%
     left: 0
-    transition: 0.5s
+    transition: 0.3s
     &::before
         content: ''
         background-color: #ffffff
@@ -42,7 +42,7 @@ button:focus
         display: block
         position: absolute
         transform: translateY(5px)
-        transition: 0.5s
+        transition: 0.3s
     &::after
         content: ''
         background-color: #ffffff
@@ -51,11 +51,10 @@ button:focus
         display: block
         position: absolute
         transform: translateY(-5px)
-        transition: 0.5s
+        transition: 0.3s
 
 .nav-toggle--active span
     width: 0
-    transition: 0.5s
     &::after
         transform: rotate(45deg)
     &::before
@@ -245,6 +244,7 @@ button:focus
 
 .page-content
     padding-top: 110px
+    padding-bottom: 70px
 
 .page-sub-title
     text-align: center
@@ -327,6 +327,44 @@ table>thead>tr>th
 @keyframes faded
     0%
         opacity: 0
+
     100%
         opacity: 1
+
+        
+.panel-contacts
+    padding: 40px
+
+    .contacts-title
+        font-size: 20px
+        color: rgb(51, 51, 51)
+        line-height: 26px
+
+.contacts-info
+    color: #666
+    font-size: 16px
+
+.contacts-list-title
+    font-weight: 900
+
+.contacts-list
+    padding-left: 18px
+    margin-bottom: 24px
+
+.contacts-email
+    color: #333
+    font-size: 16px
+    font-weight: 600
+    transition: 0.3s
+    &:hover
+        color: #000
+
+.contacts-email-link
+    color: #000
+    font-size: 16px
+    font-weight: 400
+    transition: 0.3s
+    &:hover
+        text-decoration: none
+        color: #333
         

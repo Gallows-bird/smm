@@ -247,7 +247,7 @@ button:focus {
   color: #fff;
   border-radius: 25px;
   width: 100%;
-  padding: 12px 50px;
+  padding: 12px 20px;
   text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -467,8 +467,8 @@ table > thead > tr > th {
   margin-top: 24px;
   -webkit-animation-name: auth-fade;
           animation-name: auth-fade;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s; }
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s; }
 
 @-webkit-keyframes auth-fade {
   0% {
@@ -489,3 +489,49 @@ table > thead > tr > th {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 1; } }
+
+.mass-order-rules .panel-head .panel-title {
+  color: #333333;
+  position: relative;
+  font-size: 16px;
+  display: block;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  text-transform: uppercase; }
+  .mass-order-rules .panel-head .panel-title:hover {
+    text-decoration: none; }
+
+.mass-order-rules {
+  padding: 10px 40px; }
+
+.panel-head .collapsed::after {
+  content: '';
+  background: url("../img/arrow-down.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  bottom: 0;
+  right: 0; }
+
+.panel-head .panel-title::after {
+  content: '';
+  background: url("../img/arrow-down.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  bottom: 0;
+  right: 0; }

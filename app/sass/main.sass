@@ -220,7 +220,7 @@ button:focus
     color: #fff
     border-radius: 25px
     width: 100%
-    padding: 12px 50px
+    padding: 12px 20px
     text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25)
     transition: 0.3s
     font-weight: 700
@@ -413,7 +413,7 @@ table>thead>tr>th
 .auth-panel
     margin-top: 24px
     animation-name: auth-fade
-    animation-duration: 0.8s
+    animation-duration: 0.7s
 
 @keyframes auth-fade
     0%
@@ -422,3 +422,41 @@ table>thead>tr>th
     100%
         transform: scale(1)
         opacity: 1
+
+.mass-order-rules .panel-head .panel-title
+    color: #333333
+    position: relative
+    font-size: 16px
+    display: block
+    align-items: center
+    font-weight: 600
+    text-transform: uppercase
+    &:hover
+        text-decoration: none
+
+.mass-order-rules
+    padding: 10px 40px
+
+.panel-head .collapsed::after
+    content: ''
+    background: url('../img/arrow-down.svg')
+    background-repeat: no-repeat
+    width: 24px
+    height: 24px
+    position: absolute
+    transition: 0.3s
+    transform: rotate(180deg)
+    bottom: 0
+    right: 0
+
+.panel-head .panel-title::after
+    content: ''
+    background: url('../img/arrow-down.svg')
+    background-repeat: no-repeat
+    width: 24px
+    height: 24px
+    position: absolute
+    
+    transition: 0.3s
+    bottom: 0
+    right: 0

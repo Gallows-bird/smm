@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Exo+2:100,400,600,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:100,400,600,700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -41,7 +44,8 @@
                     <input type="text" name="login" class="form-control" placeholder="Логин" required>
                     <input type="email" name="mail" class="form-control" placeholder="Почта" required>
                     <input type="password" name="password" class="form-control" placeholder="Пароль" required>
-                    <input type="password" name="re-password" class="form-control" placeholder="Повторите пароль" required>
+                    <input type="password" name="re-password" class="form-control" placeholder="Повторите пароль"
+                        required>
                     <hr class="grey-hr">
                     <div class="form-group">
                         <button type="submit" class="btn" name="submit2">Регистрация</button>
@@ -92,23 +96,39 @@
             <div class="container">
                 <div class="panel mass-order-rules" id="accordion">
                     <div class="panel-head">
-                        <a href="#collapseRules" class="panel-title collapsed" data-toggle="collapse">Как пользоваться:</a>
+                        <a href="#collapseRules" class="panel-title collapsed" data-toggle="collapse">Как
+                            пользоваться:</a>
                     </div>
-                    <div class="panel-collapse collapse" id="collapseRules" role="tabpanel">
+                    <div class="panel-body collapse" id="collapseRules" role="tabpanel">
                         <hr class="grey-hr">
+                        <p><b>- Структура: </b>cоц.сеть | id услуги | ссылка | количество <br>
+                            <b>- Пример: </b>instagram | 44 | https://www.instagram.com/sample/ | 1000
+                        </p>
                         <hr class="grey-hr">
-                        <hr class="grey-hr">
-                        <hr class="grey-hr">
+                        <p>- Каждый заказ с новой строки <br>
+                            - Каждый параметр должен быть разделен символом | <br>
+                            - Максимальное количество заказов за один раз: 30
+                        </p>
                     </div>
+                </div>
+                <div class="panel mass-order">
+                    <form action="" id="massOrder" name="mass-order">
+                        <span class="label-inp">Заказы (Каждый с новой строки):</span>
+                        <textarea class="form-control mass-order-inp" name="orders" id="orders"
+                            placeholder="cоц.сеть | id услуги | ссылка | количество"></textarea>
+                            <button class="btn">Запуск</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
     <script src="js/main.js"></script>
 </body>
 

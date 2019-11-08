@@ -1,6 +1,7 @@
 body {
   font-family: 'Exo 2', sans-serif;
-  background-color: #f7f5ff; }
+  background-color: #f7f5ff;
+  color: #666666; }
 
 button,
 button:active,
@@ -225,7 +226,8 @@ button:focus {
 .modal-title {
   text-align: center;
   font-weight: 600;
-  font-size: 24px; }
+  font-size: 24px;
+  color: #000000; }
 
 .form-control {
   font-size: 16px;
@@ -505,33 +507,38 @@ table > thead > tr > th {
     text-decoration: none; }
 
 .mass-order-rules {
-  padding: 10px 40px; }
-
-.panel-head .collapsed::after {
-  content: '';
-  background: url("../img/arrow-down.svg");
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-  bottom: 0;
-  right: 0; }
+  padding: 15px 40px;
+  margin-bottom: 50px; }
 
 .panel-head .panel-title::after {
-  content: '';
-  background: url("../img/arrow-down.svg");
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
   position: absolute;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   bottom: 0;
-  right: 0; }
+  right: 0;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f309";
+  color: #333333;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.panel-head .collapsed::after {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg); }
+
+.mass-order {
+  padding: 40px; }
+
+.label-inp {
+  font-size: 12px;
+  color: #a9a9a9; }
+
+textarea.mass-order-inp {
+  height: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 40px; }

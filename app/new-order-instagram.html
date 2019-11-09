@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:100,400,600,700&display=swap&subset=cyrillic"
         rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -90,34 +91,76 @@
             </div>
         </nav>
     </header>
-
     <div class="page-content">
         <div class="container">
-            <h1 class="page-title">Войти в кабинет</h1>
-            <hr class="grey-hr">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="panel auth-panel">
-                        <ul class="auth-top">
-                            <li class="auth-item">
-                                <a href="#" class="auth-item-link">Войти</a>
-                            </li>
-                            <li class="auth-item">
-                                <a href="register.html" class="auth-item-link">Регистрация</a>
-                            </li>
-                        </ul>
-                        <div class="auth-inner">
-                            <form action="" class="auth-form" id="login">
-                                <label class="auth-inp-label">Ваш логин:</label>
-                                <input type="text" name="login" class="form-control" placeholder="Логин" required>
-                                <label class="auth-inp-label">Ваш пароль:</label>
-                                <input type="password" name="password" class="form-control" placeholder="Пароль"
-                                    required>
-                                <button type="submit" class="btn" name="submit">Войти</button>
-                            </form>
-                            <hr class="grey-hr">
-                            <a href="reset.html" class="auth-item-link auth-bottom-link">Забыли пароль?</a>
-                        </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="panel order-tab-panel margin-bottom-50">
+                        <li class="order-tab active">
+                            <a href="new-order-instagram.html" class="order-tab-link">Instagram</a>
+                        </li>
+                        <li class="order-tab">
+                            <a href="#" class="order-tab-link">Вконтакте</a>
+                        </li>
+                        <li class="order-tab">
+                            <a href="#" class="order-tab-link">YouTube</a>
+                        </li>
+                        <li class="order-tab">
+                            <a href="#" class="order-tab-link">Telegram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel order-params">
+                        <form action="" class="order-form" id="orderForm">
+                            <input type="hidden" value="instagram" name="soc" id="soc">
+                            <input type="hidden" value="newOrder" name="action">
+                            <div class="count-wrap">
+                                <div class="count">
+                                    <span class="label-inp">Вид накрутки:</span>
+                                    <select class="form-control" name="items">
+                                        <option value="0">- Не указано -</option>
+                                        <option value="1">Подписчики</option>
+                                        <option value="2">Лайки</option>
+                                        <option value="3">Просмотры</option>
+                                        <option value="4">Комментарии</option>
+                                    </select>
+                                </div>
+                                <div class="count">
+                                    <span class="label-inp">Тип накрутки (Стоимость за 1000 шт):</span>
+                                    <select class="form-control" name="service0" id="typeSel0">
+                                        <option value="0">- Не указано -</option>
+                                    </select>
+
+                                    <select class="form-control" name="service1" id="typeSel1">
+                                        <option value="0">- Не указано -</option>
+                                        <option value="189.00" id="typeNum1">Подп[S] - Стандарт - 189 руб</option>
+                                        <option value="339.00" id="typeNum2">Подп[S] - РФ/СНГ - 399 руб</option>
+                                        <option value="499.00" id="typeNum3">Подп[S] - Турбо РФ/СНГ - 499 руб</option>
+                                    </select>
+
+                                    <select class="form-control" name="service2" id="typeSel2">
+                                        <option value="0">- Не указано -</option>
+                                        <option value="75.00" id="typeNum4">Лайки - Медленные - 75 руб</option>
+                                        <option value="79.00" id="typeNum5">Лайки - Стандарт - 79 руб</option>
+                                        <option value="99.00" id="typeNum6">Лайки - С охватом - 99 руб</option>
+                                        <option value="139.00" id="typeNum7">Лайки - Быстрые - 139 руб</option>
+                                        <option value="159.00" id="typeNum8">Лайки - Турбо - 159 руб</option>
+                                    </select>
+
+                                    <select class="form-control" name="service3" id="type3">
+                                        <option value="0">- Не указано -</option>
+                                        <option value="3.00" id="typeNum9">Просмотры - Турбо - 3 руб</option>
+                                        <option value="0.40" id="typeNum10">Просмотры - 40 коп</option>
+                                        <option value="0.30" id="typeNum11">Просмотры - 30 коп</option>
+                                        <option value="0.20" id="typeNum12">Просмотры - 20 коп</option>
+                                        <option value="0.01" id="typeNum13">Просмотры - 1 коп</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

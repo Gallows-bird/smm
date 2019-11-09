@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    // nav icon animate
     var burgerAnimate = $('.nav-toggle');
 
     $('#main-nav').on('show.bs.collapse', function() {
@@ -10,10 +10,8 @@ $(document).ready(function() {
         burgerAnimate.removeClass('nav-toggle--active');
     });
 
-
+    // index animate
     $('.index-top').fadeIn(1500);
-    // $('.auth-panel').fadeIn(500);
-
 
     $(function() {
         var indexBtnTop = $('.index-btn-top');
@@ -23,9 +21,9 @@ $(document).ready(function() {
         }, 800);
     });
 
-
-    var tab = document.querySelectorAll('.order-tab'),
-        headerTab = document.querySelector('.order-panel'),
+    // price tablist
+    var tab = document.querySelectorAll('.order-tab-link'),
+        headerTab = document.querySelector('.order-tab-panel'),
         tabContent = document.querySelectorAll('.price-tab');
 
     function hideTabContent(a) {
@@ -45,7 +43,7 @@ $(document).ready(function() {
 
     headerTab.addEventListener('click', function(event) {
         var target = event.target;
-        if (target && target.classList.contains('order-tab')) {
+        if (target && target.classList.contains('order-tab-link')) {
             for (var i = 0; i < tabContent.length; i++) {
                 if (target == tab[i]) {
                     hideTabContent(0);
@@ -54,6 +52,5 @@ $(document).ready(function() {
                 }
             }
         }
-
     });
 });

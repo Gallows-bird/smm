@@ -91,34 +91,32 @@
             </div>
         </nav>
     </header>
-    <div class="page-wrapper">
-        <div class="page-content">
-            <div class="container">
-                <div class="panel mass-order-rules" id="accordion">
-                    <div class="panel-head">
-                        <a href="#collapseRules" class="panel-title collapsed" data-toggle="collapse">Как
-                            пользоваться:</a>
-                    </div>
-                    <div class="panel-body collapse" id="collapseRules" role="tabpanel">
-                        <hr class="grey-hr">
-                        <p><b>- Структура: </b>cоц.сеть | id услуги | ссылка | количество <br>
-                            <b>- Пример: </b>instagram | 44 | https://www.instagram.com/sample/ | 1000
-                        </p>
-                        <hr class="grey-hr">
-                        <p>- Каждый заказ с новой строки <br>
-                            - Каждый параметр должен быть разделен символом | <br>
-                            - Максимальное количество заказов за один раз: 30
-                        </p>
-                    </div>
+    <div class="page-content">
+        <div class="container">
+            <div class="panel mass-order-rules" id="accordion">
+                <div class="panel-head">
+                    <a href="#collapseRules" class="panel-title collapsed" data-toggle="collapse">Как
+                        пользоваться:</a>
                 </div>
-                <div class="panel mass-order">
-                    <form action="" id="massOrder" name="mass-order">
-                        <span class="label-inp">Заказы (Каждый с новой строки):</span>
-                        <textarea class="form-control mass-order-inp" name="orders" id="orders"
-                            placeholder="cоц.сеть | id услуги | ссылка | количество"></textarea>
-                            <button class="btn">Запуск</button>
-                    </form>
+                <div class="panel-body collapse" id="collapseRules" role="tabpanel">
+                    <hr class="grey-hr">
+                    <p><b>- Структура: </b>cоц.сеть | id услуги | ссылка | количество <br>
+                        <b>- Пример: </b>instagram | 44 | https://www.instagram.com/sample/ | 1000
+                    </p>
+                    <hr class="grey-hr">
+                    <p>- Каждый заказ с новой строки <br>
+                        - Каждый параметр должен быть разделен символом | <br>
+                        - Максимальное количество заказов за один раз: 30
+                    </p>
                 </div>
+            </div>
+            <div class="panel mass-order">
+                <form action="" id="massOrder" name="mass-order">
+                    <span class="label-inp">Заказы (Каждый с новой строки):</span>
+                    <textarea class="form-control mass-order-inp" name="orders" id="orders"
+                        placeholder="cоц.сеть | id услуги | ссылка | количество"></textarea>
+                    <button class="btn">Запуск</button>
+                </form>
             </div>
         </div>
     </div>

@@ -3,6 +3,22 @@ body
     background-color: #f7f5ff
     color: #666666
 
+.margin-top-25
+    margin-top: 25px
+
+.margin-bottom-50
+    margin-bottom: 50px
+
+.margin-top-50
+    margin-top: 50px
+
+.margin-bottom-25
+    margin-bottom: 25px
+
+@media (max-width: 768px)
+    .container
+        max-width: 100%
+
 button,
 button:active,
 button:focus
@@ -210,6 +226,7 @@ button:focus
     height: 44px
     padding: 0 20px
     margin-bottom: 16px
+    appearance: none
     border: 1px solid #d9d9d9
     transition: all 0.3s
     &:focus
@@ -265,39 +282,46 @@ button:focus
     border-radius: 15px
     box-shadow: 0 1px 10px 0 rgba(0,0,0,0.12)
 
-.price-tab-link
-    color: #000
+.order-tab-panel
+    display: flex
+    flex-wrap: wrap
+    font-size: 14px
+    list-style: none
+    padding: 0
+
+.order-tab
+    width: 25%
     font-weight: 700
     padding: 20px 30px
     text-align: center
-    display: block
     border-right: 1px solid #ececec
+
+
+.order-tab .order-tab-link
+    padding: 20px 30px
+    cursor: pointer
+    color: #000
     &:hover
         color: #000000
         text-decoration: none
 
-.order-panel
-    display: flex
-    flex-wrap: wrap
-    font-size: 14px
-
-.order-tab
-    width: 20%
-
-.price-tab-other
-    border-right: none
 
 @media (max-width: 768px)
-    .order-tab:nth-child(1), .order-tab:nth-child(2)
+    .order-tab
         width: 50%
+
+    .order-tab:nth-child(-n+2)
         border-bottom: 1px solid #ececec
 
-    .order-tab:nth-child(n+3)
-        width: 33.33333%
-
-    .price-tab-link
+    .order-tab
         padding: 15px 10px
         font-size: 14px
+
+    .order-tab > a
+        padding: 10px 20px
+    
+    .order-tab .order-tab-link
+        padding: 20px 20px
 
 .price-list
     margin-top: 50px
@@ -466,3 +490,6 @@ textarea.mass-order-inp
     padding-top: 20px
     padding-bottom: 20px
     margin-bottom: 40px
+
+.count-wrap
+    padding: 20px 40px

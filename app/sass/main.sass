@@ -2,22 +2,14 @@ body
     font-family: 'Exo 2', sans-serif
     background-color: #f7f5ff
     color: #666666
-
-.margin-top-25
-    margin-top: 25px
-
-.margin-bottom-50
-    margin-bottom: 50px
-
-.margin-top-50
-    margin-top: 50px
-
-.margin-bottom-25
-    margin-bottom: 25px
+    font-size: 14px
 
 @media (max-width: 768px)
     .container
         max-width: 100%
+
+h5
+    font-weight: 400
 
 button,
 button:active,
@@ -194,12 +186,15 @@ button:focus
 
 .white-hr
     background-color: #fff
+    margin-top: 25px
+    margin-bottom: 25px
 
 .grey-hr
     background-color: #d9d9d9
     border-top: 1px solid #d9d9d9
     width: 100%
-    margin: 24px 0
+    margin-top: 25px
+    margin-bottom: 25px
 
 .index-bottom
     display: block
@@ -296,7 +291,6 @@ button:focus
     text-align: center
     border-right: 1px solid #ececec
 
-
 .order-tab .order-tab-link
     padding: 20px 30px
     cursor: pointer
@@ -304,7 +298,6 @@ button:focus
     &:hover
         color: #000000
         text-decoration: none
-
 
 @media (max-width: 768px)
     .order-tab
@@ -319,7 +312,7 @@ button:focus
 
     .order-tab > a
         padding: 10px 20px
-    
+
     .order-tab .order-tab-link
         padding: 20px 20px
 
@@ -364,10 +357,13 @@ table>thead>tr>th
 .panel-contacts
     padding: 40px
 
-    .contacts-title
-        font-size: 20px
-        color: rgb(51, 51, 51)
-        line-height: 26px
+.text-medium
+    font-size: 16px
+
+.contacts-title
+    font-size: 20px
+    color: rgb(51, 51, 51)
+    line-height: 26px
 
 .contacts-info
     color: #666
@@ -449,18 +445,20 @@ table>thead>tr>th
         transform: scale(1)
         opacity: 1
 
-.mass-order-rules .panel-head .panel-title
+.panel-collapse .panel-head .panel-title
     color: #333333
     position: relative
     font-size: 16px
     display: block
     align-items: center
     font-weight: 600
-    text-transform: uppercase
     &:hover
         text-decoration: none
 
-.mass-order-rules
+.upper-text
+    text-transform: uppercase
+
+.panel-collapse
     padding: 15px 40px
     margin-bottom: 50px
 
@@ -490,6 +488,49 @@ textarea.mass-order-inp
     padding-top: 20px
     padding-bottom: 20px
     margin-bottom: 40px
-
+// order
 .count-wrap
     padding: 20px 40px
+// order
+
+.panel-404
+    padding: 40px
+
+.panel-grey
+    padding: 40px
+    background-color: #666666
+    color: #ffffff
+    border-radius: 15px
+
+.order-tab:first-child.active
+    background-color: #fffff7
+    border-top-left-radius: 15px
+    border-bottom-left-radius: 15px
+
+.order-tab:last-child.active
+    background-color: #fffff7
+    border-top-right-radius: 15px
+    border-bottom-right-radius: 15px
+
+.order-tab.active
+    background-color: #fffff7
+
+.label
+    font-size: 14px
+    color: #a9a9a9
+
+.mt-25
+    margin-top: 25px
+
+.mt-10
+    margin-top: 10px
+
+.mb-50
+    margin-bottom: 50px
+
+.mt-50
+    margin-top: 50px
+
+.mb-25
+    margin-bottom: 25px
+

@@ -1,23 +1,15 @@
 body {
   font-family: 'Exo 2', sans-serif;
   background-color: #f7f5ff;
-  color: #666666; }
-
-.margin-top-25 {
-  margin-top: 25px; }
-
-.margin-bottom-50 {
-  margin-bottom: 50px; }
-
-.margin-top-50 {
-  margin-top: 50px; }
-
-.margin-bottom-25 {
-  margin-bottom: 25px; }
+  color: #666666;
+  font-size: 14px; }
 
 @media (max-width: 768px) {
   .container {
     max-width: 100%; } }
+
+h5 {
+  font-weight: 400; }
 
 button,
 button:active,
@@ -217,13 +209,16 @@ button:focus {
   display: none; }
 
 .white-hr {
-  background-color: #fff; }
+  background-color: #fff;
+  margin-top: 25px;
+  margin-bottom: 25px; }
 
 .grey-hr {
   background-color: #d9d9d9;
   border-top: 1px solid #d9d9d9;
   width: 100%;
-  margin: 24px 0; }
+  margin-top: 25px;
+  margin-bottom: 25px; }
 
 .index-bottom {
   display: block; }
@@ -405,10 +400,14 @@ table > thead > tr > th {
 
 .panel-contacts {
   padding: 40px; }
-  .panel-contacts .contacts-title {
-    font-size: 20px;
-    color: #333333;
-    line-height: 26px; }
+
+.text-medium {
+  font-size: 16px; }
+
+.contacts-title {
+  font-size: 20px;
+  color: #333333;
+  line-height: 26px; }
 
 .contacts-info {
   color: #666;
@@ -514,7 +513,7 @@ table > thead > tr > th {
             transform: scale(1);
     opacity: 1; } }
 
-.mass-order-rules .panel-head .panel-title {
+.panel-collapse .panel-head .panel-title {
   color: #333333;
   position: relative;
   font-size: 16px;
@@ -523,12 +522,14 @@ table > thead > tr > th {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: 600;
-  text-transform: uppercase; }
-  .mass-order-rules .panel-head .panel-title:hover {
+  font-weight: 600; }
+  .panel-collapse .panel-head .panel-title:hover {
     text-decoration: none; }
 
-.mass-order-rules {
+.upper-text {
+  text-transform: uppercase; }
+
+.panel-collapse {
   padding: 15px 40px;
   margin-bottom: 50px; }
 
@@ -567,3 +568,44 @@ textarea.mass-order-inp {
 
 .count-wrap {
   padding: 20px 40px; }
+
+.panel-404 {
+  padding: 40px; }
+
+.panel-grey {
+  padding: 40px;
+  background-color: #666666;
+  color: #ffffff;
+  border-radius: 15px; }
+
+.order-tab:first-child.active {
+  background-color: #fffff7;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px; }
+
+.order-tab:last-child.active {
+  background-color: #fffff7;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px; }
+
+.order-tab.active {
+  background-color: #fffff7; }
+
+.label {
+  font-size: 14px;
+  color: #a9a9a9; }
+
+.mt-25 {
+  margin-top: 25px; }
+
+.mt-10 {
+  margin-top: 10px; }
+
+.mb-50 {
+  margin-bottom: 50px; }
+
+.mt-50 {
+  margin-top: 50px; }
+
+.mb-25 {
+  margin-bottom: 25px; }

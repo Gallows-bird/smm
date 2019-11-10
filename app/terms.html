@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:100,400,500,600,700&display=swap&subset=cyrillic"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<!-- modal -->
+	<div class="modal fade" id="entryModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content modal-entry">
+				<div class="modal-title">Войти</div>
+				<hr class="grey-hr">
+				<form action="" id="loginModalForm" method="post">
+					<input type="text" name="login" class="form-control" placeholder="Логин" required>
+					<input type="password" name="password" class="form-control" placeholder="Пароль" required>
+					<hr class="grey-hr">
+					<div class="form-group">
+						<button type="submit" class="btn" name="submit">Войти</button>
+					</div>
+					<hr class="grey-hr">
+					<div class="text-center">
+						<a href="#" class="reset-link">Забыли пароль?</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="registrModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content modal-registr">
+				<div class="modal-title">Регистрация</div>
+				<hr class="grey-hr">
+				<form action="" id="registrModalForm" method="post">
+					<input type="text" name="login" class="form-control" placeholder="Логин" required>
+					<input type="email" name="mail" class="form-control" placeholder="Почта" required>
+					<input type="password" name="password" class="form-control" placeholder="Пароль" required>
+					<input type="password" name="re-password" class="form-control" placeholder="Повторите пароль" required>
+					<hr class="grey-hr">
+					<div class="form-group">
+						<button type="submit" class="btn" name="submit2">Регистрация</button>
+					</div>
+					<hr class="grey-hr">
+					<div class="text-center">
+						<a href="#" class="reset-link">Уже зарегистрированы?</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- modal-end -->
+	<header class="page-header">
+		<nav class=" navbar navbar-expand-lg">
+			<a href="index.html" class="navbar-brand">
+				<img src="img/logo2.png" alt="Лого" width="180" height="50">
+			</a>
+			<button class="navbar-toggler nav-toggle" type="button" data-toggle="collapse" data-target="#main-nav">
+				<span></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="main-nav">
+				<ul class="navbar-nav user-nav">
+					<li class="nav-item">
+						<a href="#" class="nav-link" data-toggle="modal" data-target="#entryModal">Войти</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link" data-toggle="modal" data-target="#registrModal">Регистрация</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav other-nav">
+					<li class="nav-item">
+						<a href="price.html" class="nav-link">Прайс</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Новости</a>
+					</li>
+					<li class="nav-item">
+						<a href="contacts.html" class="nav-link">Контакты</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<div class="page-content">
+		<div class="container">
+			<h1 class="page-title">Правила сервиса</h1>
+			<p class="page-sub-title">Прежде чем заниматься накруткой, вы должны ознакомиться и принять наши правила</p>
+			<hr class="grey-hr">
+			<div class="panel-grey mt-50">
+				<h5>1. Социальные сети можно сравнить со спортом больших достижений, а наши услуги - с допингом.</h5>
+				<hr class="white-hr">
+				<p class="mb-50">1.1 Наша главная задача - максимально минимизировать возможные риски и сделать
+					использование нашего сервиса безопасным, однако мы не можем нести ответственность за ваши аккаунты, ваш
+					бизнес, ваши результаты. <br>
+					1.2 Наряду с обеспечением общей безопасности, мы применяем комплекс мер по обеспечению конфиденциальности при
+					работе с личными данными, но в случае непредвиденной утечки информации ответственности так же не несем.
+				</p>
+				<h5>2. Рынок гибок, и мы всегда адекватно реагируем на изменение цен наших услуг.</h5>
+				<hr class="white-hr">
+				<p class="mb-50">
+					2.1 Изложенные в прайс листе цены не являются статичными и могут быть изменены как в сторону повышения, так и
+					в сторону снижения. <br>
+					2.2 Мы трепетно относимся к клиентам и взятым на себя обязательствам, но указанные сроки выполнения работ, а
+					так же критерии не являются точными в 100% ситуаций. <br>
+				</p>
+				<h5>3. Любая накрутка имеет коэффициент списаний.</h5>
+				<hr class="white-hr">
+				<p class="mb-50">
+						3.1 Исходя из этого мы можем запустить докрутку, но не более 1 раза (Для клиентов заказавших услугу с гарантией!). <br>
+						3.2 На аккаунты с количеством подписчиков свыше 100.000, гарантия не распространяется, т.к. невозможно отследить какие именно подписчики списываются. <br>
+						3.3 Во время массовых чисток, гарантия так же не работает. <br>
+						3.4 Мы не даём гарантии что 100% аккаунтов во всех опциях используемых для накрутки имеют аватары, описание, регулярные публикации и являются активными.
+				</p>
+				<h5>4. Процесс накрутки.</h5>
+				<hr class="white-hr">
+				<p class="mb-50">
+						4.1 Во время накрутки (с момента ее начала до окончания) ваш аккаунт должен быть открытым, а логин/ник/адрес страницы не должен изменяться! В противном случае мы не сможем осуществить услуги. <br>
+						4.2 Запрещается одновременное включение нескольких однотипных заданий, или же накрутка с помощью разных сайтов/сервисов, в некоторых случаях по технологическим особенностям процесса накрутки это может повлечь за собой оказание услуги не в полном объёме. Денежные средства на личный счёт клиента на сайте в этом случае возвращены быть не могут.
+				</p>
+				<h5>5. Технические особенности.</h5>
+				<hr class="white-hr">
+				<p class="mb-50">
+						5.1 Время от времени сайт может приостанавливать оказание услуг, это связано с улучшением вопросов безопасности и улучшения сервиса.
+				</p>
+				<h5>6. Работа с клиентами.</h5>
+				<hr class="white-hr">
+				<p class="mb-50">
+						6.1 В случае технических неполадок или вопросов по работе сервиса вы можете отправить свой вопрос в разделе «контакты» сайта и получить ответ в течение 24 с момента подачи заявки.
+				</p>
+				<h5>7. Важно!</h5>
+				<hr class="white-hr">
+				<p class="mb-50">
+						7.1 Запуск и осуществление заказа является необратимым процессом для любого вида накрутки! <br>
+						7.2 Отмена заказов невозможна, ни при каких обстоятельствах! Если была допущена ошибка, заказ будет отменен автоматически в течение 72 часов. <br>
+						7.3 Мы вправе отказать вам в оказании услуг в случае размещения вами запрещенных материалов (пропагандирующих экстремизм, педофилию, терроризм и д.р. запрещенные УК РФ материалы).
+				</p>
+				<h5>8. Возврат средств.</h5>
+				<hr class="white-hr">
+				<p class="mb-50">
+						8.1 Возврат (вывод с сайта) денежных средств клиенту возможен лишь в случае прекращения работы сервиса.
+				</p>
+				<h5>9. Партнерская программа.</h5>
+				<hr class="white-hr">
+				<p class="mb-50">
+						9.1 Запрещена регистрация мультиаккаунтов по своей пригласительной ссылке, с целью получения выгоды. Это повлечет за собой бан и отклонение заявки на вывод, без возможности обжалования!
+				</p>
+				<h5>10. Блокировка в сервисе.</h5>
+				<hr class="white-hr">
+				<p class="mb-50">
+						10.1 Попытка взлома сайта, накрутки средств, обмана или оскорбительного общения с администратрацией сервиса считается нарушением правил и влечет за собой перманентную блокировку аккаунта без возможности возврата средств.
+				</p>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+		</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+		</script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

@@ -63,7 +63,8 @@
 			<a href="index.html" class="navbar-brand">
 				<img src="img/logo2.png" alt="Лого" width="180" height="50">
 			</a>
-			<button class="navbar-toggler nav-toggle" type="button" data-toggle="collapse" data-target="#main-nav">
+			<button class="navbar-toggler nav-toggle" type="button" data-toggle="collapse" data-target="#main-nav"
+				aria-controls='main-nav'>
 				<span></span>
 			</button>
 
@@ -81,7 +82,7 @@
 						<a href="price.html" class="nav-link">Прайс</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">Новости</a>
+						<a href="news.html" class="nav-link">Новости</a>
 					</li>
 					<li class="nav-item">
 						<a href="contacts.html" class="nav-link">Контакты</a>
@@ -92,75 +93,43 @@
 	</header>
 	<div class="page-content">
 		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<ul class="panel order-tab-panel mb-50">
-						<li class="order-tab active">
-							<a href="new-order-instagram.html" class="order-tab-link">Instagram</a>
-						</li>
-						<li class="order-tab">
-							<a href="#" class="order-tab-link">Вконтакте</a>
-						</li>
-						<li class="order-tab">
-							<a href="#" class="order-tab-link">YouTube</a>
-						</li>
-						<li class="order-tab">
-							<a href="#" class="order-tab-link">Telegram</a>
-						</li>
-					</ul>
+			<h1 class="page-title  mb-50">Мои заказы</h1>
+			<hr class="grey-hr">
+			<ul class="panel order-tab-panel mt-25">
+				<li class="order-tab active">
+					<a href="#" class="order-tab-link">Instagram</a>
+				</li>
+				<li class="order-tab">
+					<a href="#" class="order-tab-link">Вконтакте</a>
+				</li>
+				<li class="order-tab">
+					<a href="#" class="order-tab-link">YouTube</a>
+				</li>
+				<li class="order-tab">
+					<a href="#" class="order-tab-link">Telegram</a>
+				</li>
+			</ul>
+			<div class="panel panel-collapse text-medium" id="accordion">
+				<div class="panel-head">
+					<a href="#notif" class="panel-title collapsed" data-toggle="collapse">Оповещения</a>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="panel order-params">
-						<form action="" class="order-form" id="orderForm">
-							<input type="hidden" value="instagram" name="soc" id="soc">
-							<input type="hidden" value="newOrder" name="action">
-							<div class="count-wrap">
-								<div class="count">
-									<span class="label-inp">Вид накрутки:</span>
-									<select class="form-control" name="items">
-										<option value="0">- Не указано -</option>
-										<option value="1">Подписчики</option>
-										<option value="2">Лайки</option>
-										<option value="3">Просмотры</option>
-										<option value="4">Комментарии</option>
-									</select>
-								</div>
-								<div class="count">
-									<span class="label-inp">Тип накрутки (Стоимость за 1000 шт):</span>
-									<select class="form-control" name="service0" id="typeSel0">
-										<option value="0">- Не указано -</option>
-									</select>
-
-									<select class="form-control" name="service1" id="typeSel1">
-										<option value="0">- Не указано -</option>
-										<option value="189.00" id="typeNum1">Подп[S] - Стандарт - 189 руб</option>
-										<option value="339.00" id="typeNum2">Подп[S] - РФ/СНГ - 399 руб</option>
-										<option value="499.00" id="typeNum3">Подп[S] - Турбо РФ/СНГ - 499 руб</option>
-									</select>
-
-									<select class="form-control" name="service2" id="typeSel2">
-										<option value="0">- Не указано -</option>
-										<option value="75.00" id="typeNum4">Лайки - Медленные - 75 руб</option>
-										<option value="79.00" id="typeNum5">Лайки - Стандарт - 79 руб</option>
-										<option value="99.00" id="typeNum6">Лайки - С охватом - 99 руб</option>
-										<option value="139.00" id="typeNum7">Лайки - Быстрые - 139 руб</option>
-										<option value="159.00" id="typeNum8">Лайки - Турбо - 159 руб</option>
-									</select>
-
-									<select class="form-control" name="service3" id="type3">
-										<option value="0">- Не указано -</option>
-										<option value="3.00" id="typeNum9">Просмотры - Турбо - 3 руб</option>
-										<option value="0.40" id="typeNum10">Просмотры - 40 коп</option>
-										<option value="0.30" id="typeNum11">Просмотры - 30 коп</option>
-										<option value="0.20" id="typeNum12">Просмотры - 20 коп</option>
-										<option value="0.01" id="typeNum13">Просмотры - 1 коп</option>
-									</select>
-								</div>
-							</div>
-						</form>
-					</div>
+				<div class="panel-body collapse" role="tabpanel" id="notif">
+					<form action="" id="notifMail" class="checkout-form mt-25" method="POST">
+						<input type="hidden" name="action" class="form-control" value="notifMail">
+						<div class="count">
+							<span class="label">Действует только на новые заказы, созданные после активации данной функции.</span>
+							<hr class="grey-hr mt-10">
+						</div>
+						<div class="count">
+							<span class="label-inp">Оповещать если статус заказа:</span>
+							<select name="alert_new" class="form-control">
+								<option value="0">Не оповещать</option>
+								<option value="1">Готово</option>
+								<option value="2">Отменен</option>
+								<option value="3">Готово или отменен</option>
+							</select>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

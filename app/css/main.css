@@ -241,6 +241,7 @@ button:focus {
   color: #000000; }
 
 .form-control {
+  display: inline-block;
   font-size: 16px;
   height: 44px;
   padding: 0 20px;
@@ -361,9 +362,9 @@ button:focus {
   display: table;
   margin-bottom: 0; }
 
-.price-tab .table thead tr th,
-.price-tab .table tbody tr th,
-.price-tab .table tbody tr td {
+.tab-content .table thead tr th,
+.tab-content .table tbody tr th,
+.tab-content .table tbody tr td {
   border-top: none;
   border-bottom: none;
   padding: 15px; }
@@ -374,10 +375,10 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 table > thead > tr > th {
   border-left: none; }
 
-.price-tab.active {
+.tab-content.active {
   display: block; }
 
-.price-tab.hide {
+.tab-content.hide {
   display: none; }
 
 .faded {
@@ -595,11 +596,76 @@ textarea.mass-order-inp {
   font-size: 14px;
   color: #a9a9a9; }
 
+.btn-notif {
+  width: auto;
+  padding: 10px 40px; }
+
+@media (max-width: 768px) {
+  .btn-notif {
+    width: 100%; } }
+
+.search-inp {
+  width: 75%; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: "Font Awesome 5 Free"; }
+
+.btn-search {
+  background-color: #383544;
+  height: 44px;
+  width: 50px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  display: inline-block;
+  font-weight: 900;
+  -webkit-box-shadow: 2.5px 4.33px 10px 0px rgba(0, 0, 0, 0.13);
+          box-shadow: 2.5px 4.33px 10px 0px rgba(0, 0, 0, 0.13);
+  margin-left: -4px;
+  padding: 0 6px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .btn-search:hover {
+    background-color: #2C2B33; }
+
+.icon-search {
+  font-style: normal; }
+
+.icon-search::before {
+  content: "\f002";
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.5; }
+
+.search-tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.search-tabs > li {
+  display: inline-block; }
+
+.search-tabs > li > a {
+  font-size: 12px;
+  color: #000000;
+  padding: 8px 18px;
+  border-radius: 15px;
+  display: block;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.12); }
+  .search-tabs > li > a:hover {
+    text-decoration: none; }
+
 .mt-25 {
   margin-top: 25px; }
 
 .mt-10 {
   margin-top: 10px; }
+
+.mb-10 {
+  margin-bottom: 10px; }
 
 .mb-50 {
   margin-bottom: 50px; }

@@ -24,7 +24,7 @@ $(document).ready(function() {
     // price tablist
     var tab = document.querySelectorAll('.order-tab-link'),
         headerTab = document.querySelector('.order-tab-panel'),
-        tabContent = document.querySelectorAll('.price-tab');
+        tabContent = document.querySelectorAll('.tab-content');
 
     function hideTabContent(a) {
         for (var i = a; i < tabContent.length; i++) {

@@ -95,7 +95,7 @@
 		<div class="container">
 			<h1 class="page-title  mb-50">Мои заказы</h1>
 			<hr class="grey-hr">
-			<ul class="panel order-tab-panel mt-25">
+			<ul class="panel order-tab-panel mt-25 mb-25">
 				<li class="order-tab active">
 					<a href="#" class="order-tab-link">Instagram</a>
 				</li>
@@ -109,18 +109,19 @@
 					<a href="#" class="order-tab-link">Telegram</a>
 				</li>
 			</ul>
-			<div class="panel panel-collapse text-medium" id="accordion">
+			<div class="panel panel-collapse text-medium mb-10" id="accordion">
 				<div class="panel-head">
-					<a href="#notif" class="panel-title collapsed" data-toggle="collapse">Оповещения</a>
+					<a href="#notifCollapse" class="panel-title collapsed" data-toggle="collapse">Оповещения</a>
 				</div>
-				<div class="panel-body collapse" role="tabpanel" id="notif">
+				<div class="panel-body collapse" role="tabpanel" id="notifCollapse">
 					<form action="" id="notifMail" class="checkout-form mt-25" method="POST">
 						<input type="hidden" name="action" class="form-control" value="notifMail">
 						<div class="count">
-							<span class="label">Действует только на новые заказы, созданные после активации данной функции.</span>
+							<span class="label">Действует только на новые заказы, созданные после активации данной
+								функции.</span>
 							<hr class="grey-hr mt-10">
 						</div>
-						<div class="count">
+						<div class="count mb-10">
 							<span class="label-inp">Оповещать если статус заказа:</span>
 							<select name="alert_new" class="form-control">
 								<option value="0">Не оповещать</option>
@@ -129,7 +130,32 @@
 								<option value="3">Готово или отменен</option>
 							</select>
 						</div>
+						<div class="count mb-10">
+							<span class="label-inp">Email для оповещения:</span>
+							<input type="text" name="mail-alert" class="form-control" placeholder="Ваш Email">
+						</div>
+						<button class="btn btn-notif mb-10" type="submit" name="submit-mail">Сохранить</button>
 					</form>
+				</div>
+			</div>
+			<div class="panel panel-collapse text-medium" id="accordion">
+				<div class="panel-head">
+					<a href="#filterCollapse" class="panel-title collapsed" data-toggle="collapse">Фильтр заказов</a>
+				</div>
+				<div class="panel-body collapse" role="tabpanel" id="filterCollapse">
+					<hr class="grey-hr">
+					<form action="get" class="checkout-form">
+						<input type="text" class="form-control search-inp" name="search" placeholder="Ссылка/номер заказа">
+						<button type="submit" class="btn-search">
+							<i class="icon-search"></i>
+						</button>
+					</form>
+					<ul class="search-tabs mb-25 mt-10">
+						<li><a href="">Все</a></li>
+						<li><a href="">В работе</a></li>
+						<li><a href="">Завершены</a></li>
+						<li><a href="">Отменены</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>

@@ -1,598 +1,597 @@
 body
-    font-family: 'Exo 2', sans-serif
-    background-color: #f7f5ff
-    color: #666666
-    font-size: 14px
+	font-family: 'Exo 2', sans-serif
+	background-color: #f7f5ff
+	color: #666666
+	font-size: 14px
 
 @media (max-width: 768px)
-    .container
-        max-width: 100%
+	.container
+		max-width: 100%
 
 h5
-    font-weight: 400
+	font-weight: 400
 
 button,
 button:active,
 button:focus
-    outline: none
+	outline: none
 
 .btn.focus, .btn:focus
-    box-shadow: none
+	box-shadow: none
 
 .page-header
-    background-color: #373544
-    position: fixed
-    width: 100%
-    z-index: 1
-    top: 0
+	background-color: #373544
+	position: fixed
+	width: 100%
+	z-index: 1
+	top: 0
 
 .nav-toggle
-    width: 36px
-    height: 50px
-    padding: 0
-    position: relative
-    border: none
-    outline: 0px
+	width: 36px
+	height: 50px
+	padding: 0
+	position: relative
+	border: none
+	outline: 0px
 
 .nav-toggle span
-    background-color: #ffffff
-    width: 36px
-    height: 2px
-    display: block
-    position: absolute
-    top: 50%
-    left: 0
-    transition: 0.3s
-    &::before
-        content: ''
-        background-color: #ffffff
-        width: 36px
-        height: 2px
-        display: block
-        position: absolute
-        transform: translateY(5px)
-        transition: 0.3s
-    &::after
-        content: ''
-        background-color: #ffffff
-        width: 36px
-        height: 2px
-        display: block
-        position: absolute
-        transform: translateY(-5px)
-        transition: 0.3s
+	background-color: #ffffff
+	width: 36px
+	height: 2px
+	display: block
+	position: absolute
+	top: 50%
+	left: 0
+	transition: 0.3s
+	&::before
+		content: ''
+		background-color: #ffffff
+		width: 36px
+		height: 2px
+		display: block
+		position: absolute
+		transform: translateY(5px)
+		transition: 0.3s
+	&::after
+		content: ''
+		background-color: #ffffff
+		width: 36px
+		height: 2px
+		display: block
+		position: absolute
+		transform: translateY(-5px)
+		transition: 0.3s
 
 .nav-toggle--active span
-    width: 0
-    &::after
-        transform: rotate(45deg)
-    &::before
-        transform: rotate(-45deg)
+	width: 0
+	&::after
+		transform: rotate(45deg)
+	&::before
+		transform: rotate(-45deg)
 
 .navbar
-    padding-bottom: 0px
-    padding-top: 0px
+	padding-bottom: 0px
+	padding-top: 0px
 
 .nav-link
-    color: #ffffff
-    font-size: 14px
-    font-weight: 400
-    padding-top: 24px
-    padding-bottom: 24px
-    transition: all 0.3s
-    text-align: center
-    &:hover
-        color: #fff
-        background-color: #2C2B33
-        transition: all 0.3s
+	color: #ffffff
+	font-size: 14px
+	font-weight: 400
+	padding-top: 24px
+	padding-bottom: 24px
+	transition: all 0.3s
+	text-align: center
+	&:hover
+		color: #fff
+		background-color: #2C2B33
+		transition: all 0.3s
 
 .navbar-collapse
-    justify-content: flex-end
+	justify-content: flex-end
 
 .user-nav
-    position: relative
-    padding-right: 10px
-    &::after
-        content: ''
-        width: 1px
-        height: 15px
-        display: block
-        position: absolute
-        top: 40%
-        right: 0
-        padding: 0
-        background-color: #fff
+	position: relative
+	padding-right: 10px
+	&::after
+		content: ''
+		width: 1px
+		height: 15px
+		display: block
+		position: absolute
+		top: 40%
+		right: 0
+		padding: 0
+		background-color: #fff
 
 .other-nav
-    padding-left: 10px
+	padding-left: 10px
 
 @media (max-width: 991px)
-    .user-nav
-        padding-right: 0
-        flex-direction: row
-        &::after
-            width: 100%
-            height: 1px
-            background-color: #fff
-            top: 100%
+	.user-nav
+		padding-right: 0
+		flex-direction: row
+		&::after
+			width: 100%
+			height: 1px
+			background-color: #fff
+			top: 100%
 
-    .user-nav .nav-item
-        width: 50%
+	.user-nav .nav-item
+		width: 50%
 
-    .other-nav
-        padding-left: 0
+	.other-nav
+		padding-left: 0
 
 .index-main
-    background-image: url(../img/index2.jpg)
-    background-size: cover
-    background-position: center
-    background-repeat: no-repeat
-    height: 100vh
-    background-color: rgba(55, 53, 68, 0.004)
-    overflow: hidden
+	background-image: url(../img/index2.jpg)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	height: 100vh
+	background-color: rgba(55, 53, 68, 0.004)
+	overflow: hidden
 
 .index-section
-    color: #ffffff
-    padding-top: 280px
+	color: #ffffff
+	padding-top: 280px
 
 .index-title
-    text-transform: uppercase
-    text-align: center
-    letter-spacing: 22px
-    font-size: 48px
-    text-shadow: 2px 3px 0 rgba(0,0,0,0.2)
+	text-transform: uppercase
+	text-align: center
+	letter-spacing: 22px
+	font-size: 48px
+	text-shadow: 2px 3px 0 rgba(0,0,0,0.2)
 
 .btn-index-start
-    text-transform: uppercase
-    background-color: #fff
-    border: 1px solid #ffffff
-    padding: 15px 50px
-    font-size: 16px
-    font-weight: 700
-    width: auto
-    border-radius: 50px
-    letter-spacing: 5px
-    color: #373544
-    transition: 0.4s
-    &:hover
-        background-color: rgba(255, 255, 255, 0.1)
-        color: #fff
-        text-decoration: none
+	text-transform: uppercase
+	background-color: #fff
+	border: 1px solid #ffffff
+	padding: 15px 50px
+	font-size: 16px
+	font-weight: 700
+	width: auto
+	border-radius: 50px
+	letter-spacing: 5px
+	color: #373544
+	transition: 0.4s
+	&:hover
+		background-color: rgba(255, 255, 255, 0.1)
+		color: #fff
+		text-decoration: none
 
 .index-sub-title
-    text-transform: uppercase
-    text-align: center
-    font-weight: 100
-    font-size: 24px
-    letter-spacing: 5px
-    line-height: 1.3
-    text-shadow: rgba(119, 119, 119, 0.5) 0px 2px 0px
+	text-transform: uppercase
+	text-align: center
+	font-weight: 100
+	font-size: 24px
+	letter-spacing: 5px
+	line-height: 1.3
+	text-shadow: rgba(119, 119, 119, 0.5) 0px 2px 0px
 
 @media (max-width: 576px)
-    .index-title
-        font-size: 32px
-        letter-spacing: 10px
+	.index-title
+		font-size: 32px
+		letter-spacing: 10px
 
-    .index-sub-title
-        font-size: 16px
+	.index-sub-title
+		font-size: 16px
 
-    .btn-index-start
-        width: 100%
-        display: block
-        padding: 10px 25px
+	.btn-index-start
+		width: 100%
+		display: block
+		padding: 10px 25px
 
 .index-top
-    display: none
+	display: none
 
 .white-hr
-    background-color: #fff
-    margin-top: 25px
-    margin-bottom: 25px
+	background-color: #fff
+	margin-top: 25px
+	margin-bottom: 25px
 
 .grey-hr
-    background-color: #d9d9d9
-    border-top: 1px solid #d9d9d9
-    width: 100%
-    margin-top: 25px
-    margin-bottom: 25px
+	background-color: #d9d9d9
+	border-top: 1px solid #d9d9d9
+	width: 100%
+	margin-top: 25px
+	margin-bottom: 25px
 
 .index-bottom
-    display: block
+	display: block
 
 .index-btn-top
-    text-align: center
-    margin-top: 100px
-    opacity: 0
+	text-align: center
+	margin-top: 100px
+	opacity: 0
 
 .modal-content
-    border-radius: 15px
-    max-width: 380px
-    margin: 50px auto
-    padding: 36px
+	border-radius: 15px
+	max-width: 380px
+	margin: 50px auto
+	padding: 36px
 
 .modal-title
-    text-align: center
-    font-weight: 600
-    font-size: 24px
-    color: #000000
+	text-align: center
+	font-weight: 600
+	font-size: 24px
+	color: #000000
 
 .form-control
-    display: inline-block
-    font-size: 16px
-    height: 44px
-    padding: 0 20px
-    margin-bottom: 16px
-    appearance: none
-    border: 1px solid #d9d9d9
-    transition: all 0.3s
-    &:focus
-        border: 1px solid #d9d9d9
-        box-shadow: none
-        background-color: #faffbd
+	display: inline-block
+	font-size: 16px
+	height: 44px
+	padding: 0 20px
+	margin-bottom: 16px
+	appearance: none
+	border: 1px solid #d9d9d9
+	transition: all 0.3s
+	&:focus
+		border: 1px solid #d9d9d9
+		box-shadow: none
+		background-color: #faffbd
 
 .btn
-    background-color: #383544
-    color: #fff
-    border-radius: 25px
-    width: 100%
-    padding: 12px 20px
-    text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25)
-    transition: 0.3s
-    font-weight: 700
-    font-size: 16px
-    &:hover
-        background-color: #8C87A2
-        color: #fff
+	background-color: #383544
+	color: #fff
+	border-radius: 25px
+	width: 100%
+	padding: 12px 20px
+	text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25)
+	transition: 0.3s
+	font-weight: 700
+	font-size: 16px
+	&:hover
+		background-color: #8C87A2
+		color: #fff
 
 .reset-link
-    font-weight: 700
-    font-size: 14px
-    color: #000000
-    &:hover
-        color: #000000
-        text-decoration: none
+	font-weight: 700
+	font-size: 14px
+	color: #000000
+	&:hover
+		color: #000000
+		text-decoration: none
 
 .page-title
-    font-size: 48px
-    color: #333
-    text-align: center
-    animation-name: faded
-    animation-duration: 1.5s
+	font-size: 48px
+	color: #333
+	text-align: center
+	animation-name: faded
+	animation-duration: 1.5s
 
 .page-content
-    padding-top: 110px
-    padding-bottom: 70px
+	padding-top: 110px
+	padding-bottom: 70px
 
 .page-sub-title
-    text-align: center
-    font-size: 11px
-    text-transform: uppercase
-    letter-spacing: 1.1px
-    color: #666
-    margin-bottom: 50px
-    animation-name: faded
-    animation-duration: 1.5s
+	text-align: center
+	font-size: 11px
+	text-transform: uppercase
+	letter-spacing: 1.1px
+	color: #666
+	margin-bottom: 50px
+	animation-name: faded
+	animation-duration: 1.5s
 
 .panel
-    background-color: #fff
-    border-radius: 15px
-    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.12)
+	background-color: #fff
+	border-radius: 15px
+	box-shadow: 0 1px 10px 0 rgba(0,0,0,0.12)
 
 .order-tab-panel
-    display: flex
-    flex-wrap: wrap
-    font-size: 14px
-    list-style: none
-    padding: 0
+	display: flex
+	flex-wrap: wrap
+	font-size: 14px
+	list-style: none
+	padding: 0
 
 .order-tab
-    width: 25%
-    font-weight: 700
-    padding: 20px 30px
-    text-align: center
-    border-right: 1px solid #ececec
+	width: 25%
+	font-weight: 700
+	padding: 20px 30px
+	text-align: center
+	border-right: 1px solid #ececec
 
 .order-tab .order-tab-link
-    padding: 20px 30px
-    cursor: pointer
-    color: #000
-    &:hover
-        color: #000000
-        text-decoration: none
+	padding: 20px 30px
+	cursor: pointer
+	color: #000
+	&:hover
+		color: #000000
+		text-decoration: none
 
 @media (max-width: 768px)
-    .order-tab
-        width: 50%
+	.order-tab
+		width: 50%
 
-    .order-tab:nth-child(-n+2)
-        border-bottom: 1px solid #ececec
+	.order-tab:nth-child(-n+2)
+		border-bottom: 1px solid #ececec
 
-    .order-tab
-        padding: 15px 10px
-        font-size: 14px
+	.order-tab
+		padding: 15px 10px
+		font-size: 14px
 
-    .order-tab > a
-        padding: 10px 20px
+	.order-tab > a
+		padding: 10px 20px
 
-    .order-tab .order-tab-link
-        padding: 20px 20px
+	.order-tab .order-tab-link
+		padding: 20px 20px
 
 .price-list
-    margin-top: 50px
-    font-size: 14px
+	margin-top: 50px
+	font-size: 14px
 
 .table
-    display: table
-    margin-bottom: 0
+	display: table
+	margin-bottom: 0
 
 .tab-content .table thead tr th,
 .tab-content .table tbody tr th,
 .tab-content .table tbody tr td
-    border-top: none
-    border-bottom: none
-    padding: 15px
+	border-top: none
+	border-bottom: none
+	padding: 15px
 
 table>thead>tr>th, table>thead>tr>td, table>tbody>tr>th, table>tbody>tr>td, table>tfoot>tr>th, table>tfoot>tr>td
-    border: 1px solid #ececec
+	border: 1px solid #ececec
 
 table>thead>tr>th
-    border-left: none
+	border-left: none
 
 .tab-content.active
-    display: block
+	display: block
 
 .tab-content.hide
-    display: none
+	display: none
 
 .faded
-    animation-name: faded
-    animation-duration: 0.5s
+	animation-name: faded
+	animation-duration: 0.5s
 
 @keyframes faded
-    0%
-        opacity: 0
+	0%
+		opacity: 0
 
-    100%
-        opacity: 1
+	100%
+		opacity: 1
 
 .panel-contacts
-    padding: 40px
+	padding: 40px
 
 .text-medium
-    font-size: 16px
+	font-size: 16px
 
 .contacts-title
-    font-size: 20px
-    color: rgb(51, 51, 51)
-    line-height: 26px
+	font-size: 20px
+	color: rgb(51, 51, 51)
+	line-height: 26px
 
 .contacts-info
-    color: #666
-    font-size: 16px
+	color: #666
+	font-size: 16px
 
 .contacts-list-title
-    font-weight: 900
+	font-weight: 900
 
 .contacts-list
-    padding-left: 18px
-    margin-bottom: 24px
+	padding-left: 18px
+	margin-bottom: 24px
 
 .contacts-email
-    color: #333
-    font-size: 16px
-    font-weight: 600
-    transition: 0.3s
-    &:hover
-        color: #000
+	color: #333
+	font-size: 16px
+	font-weight: 600
+	transition: 0.3s
+	&:hover
+		color: #000
 
 .contacts-email-link
-    color: #000
-    font-size: 16px
-    font-weight: 400
-    transition: 0.3s
-    &:hover
-        text-decoration: none
-        color: #333
+	color: #000
+	font-size: 16px
+	font-weight: 400
+	transition: 0.3s
+	&:hover
+		text-decoration: none
+		color: #333
 
 .auth-top
-    list-style: none
-    padding: 0
-    display: flex
-    justify-content: space-between
+	list-style: none
+	padding: 0
+	display: flex
+	justify-content: space-between
 
 .auth-item
-    width: 50%
-    text-align: center
-    padding-top: 20px
-    padding-bottom: 20px
-    border-bottom: 1px solid #ececec
-    &:first-child
-        border-right: 1px solid #ececec
+	width: 50%
+	text-align: center
+	padding-top: 20px
+	padding-bottom: 20px
+	border-bottom: 1px solid #ececec
+	&:first-child
+		border-right: 1px solid #ececec
 
 .auth-item-link
-    color: #000000
-    font-size: 14px
-    font-weight: 700
-    &:hover
-        text-decoration: none
-        color: #000000
+	color: #000000
+	font-size: 14px
+	font-weight: 700
+	&:hover
+		text-decoration: none
+		color: #000000
 
 .auth-form .form-control:last-of-type
-    margin-bottom: 24px
+	margin-bottom: 24px
 
 .auth-inp-label
-    font-size: 12px
-    font-weight: 700
-    color: #a9a9a9
-    margin-bottom: 4px
+	font-size: 12px
+	font-weight: 700
+	color: #a9a9a9
+	margin-bottom: 4px
 
 .auth-inner
-    padding: 0 40px 40px 40px
+	padding: 0 40px 40px 40px
 
 .auth-bottom-link
-    display: block
-    text-align: center
+	display: block
+	text-align: center
 
 .auth-panel
-    margin-top: 24px
-    animation-name: auth-fade
-    animation-duration: 0.7s
+	margin-top: 24px
+	animation-name: auth-fade
+	animation-duration: 0.7s
 
 @keyframes auth-fade
-    0%
-        transform: scale(0)
-        opacity: 0
-    100%
-        transform: scale(1)
-        opacity: 1
+	0%
+		transform: scale(0)
+		opacity: 0
+	100%
+		transform: scale(1)
+		opacity: 1
 
 .panel-collapse .panel-head .panel-title
-    color: #333333
-    position: relative
-    font-size: 16px
-    display: block
-    align-items: center
-    font-weight: 600
-    &:hover
-        text-decoration: none
+	color: #333333
+	position: relative
+	font-size: 16px
+	display: block
+	align-items: center
+	font-weight: 600
+	&:hover
+		text-decoration: none
 
 .upper-text
-    text-transform: uppercase
+	text-transform: uppercase
 
 .panel-collapse
-    padding: 15px 40px
-    margin-bottom: 50px
+	padding: 15px 40px
+	margin-bottom: 50px
 
 .panel-head .panel-title::after
-    position: absolute
-    transition: 0.3s
-    bottom: 0
-    right: 0
-    font-family: "Font Awesome 5 Free"
-    font-weight: 900
-    content: "\f309"
-    color: #333333
-    transform: rotate(180deg)
+	position: absolute
+	transition: 0.3s
+	bottom: 0
+	right: 0
+	font-family: "Font Awesome 5 Free"
+	font-weight: 900
+	content: "\f309"
+	color: #333333
+	transform: rotate(180deg)
 
 .panel-head .collapsed::after
-    transform: rotate(0deg)
+	transform: rotate(0deg)
 
 .mass-order
-    padding: 40px
+	padding: 40px
 
 .label-inp
-    font-size: 12px
-    color: #a9a9a9
+	font-size: 12px
+	color: #a9a9a9
 
 textarea.mass-order-inp
-    height: 200px
-    padding-top: 20px
-    padding-bottom: 20px
-    margin-bottom: 40px
+	height: 200px
+	padding-top: 20px
+	padding-bottom: 20px
+	margin-bottom: 40px
 // order
 .count-wrap
-    padding: 20px 40px
+	padding: 20px 40px
 // order
 
 .panel-404
-    padding: 40px
+	padding: 40px
 
 .panel-grey
-    padding: 40px
-    background-color: #666666
-    color: #ffffff
-    border-radius: 15px
+	padding: 40px
+	background-color: #666666
+	color: #ffffff
+	border-radius: 15px
 
 .order-tab:first-child.active
-    background-color: #fffff7
-    border-top-left-radius: 15px
-    border-bottom-left-radius: 15px
+	background-color: #fffff7
+	border-top-left-radius: 15px
+	border-bottom-left-radius: 15px
 
 .order-tab:last-child.active
-    background-color: #fffff7
-    border-top-right-radius: 15px
-    border-bottom-right-radius: 15px
+	background-color: #fffff7
+	border-top-right-radius: 15px
+	border-bottom-right-radius: 15px
 
 .order-tab.active
-    background-color: #fffff7
+	background-color: #fffff7
 
 .label
-    font-size: 14px
-    color: #a9a9a9
+	font-size: 14px
+	color: #a9a9a9
 
 .btn-notif
-    width: auto
-    padding: 10px 40px
+	width: auto
+	padding: 10px 40px
 
 @media (max-width: 768px)
-    .btn-notif
-        width: 100%
+	.btn-notif
+		width: 100%
 
 .search-inp
-    width: 75%
+	width: 75%
 
 [class^="icon-"], [class*=" icon-"]
-    font-family: "Font Awesome 5 Free"
+	font-family: "Font Awesome 5 Free"
 
 .btn-search
-    background-color: #383544
-    height: 44px
-    width: 50px
-    border-radius: 2px
-    border: 1px solid transparent
-    display: inline-block
-    font-weight: 900
-    box-shadow: 2.5px 4.33px 10px 0px rgba(0, 0, 0, 0.13)
-    margin-left: -4px
-    padding: 0 6px
-    transition: 0.3s
-    &:hover
-        background-color: #2C2B33
+	background-color: #383544
+	height: 44px
+	width: 50px
+	border-radius: 2px
+	border: 1px solid transparent
+	display: inline-block
+	font-weight: 900
+	box-shadow: 2.5px 4.33px 10px 0px rgba(0, 0, 0, 0.13)
+	margin-left: -4px
+	padding: 0 6px
+	transition: 0.3s
+	&:hover
+		background-color: #2C2B33
 
 .icon-search
-    font-style: normal
+	font-style: normal
 
 .icon-search::before
-    content: "\f002"
-    color: #fff
-    display: inline-block
-    font-size: 16px
-    line-height: 1.5
+	content: "\f002"
+	color: #fff
+	display: inline-block
+	font-size: 16px
+	line-height: 1.5
 
 .search-tabs
-    list-style: none
-    margin: 0
-    padding: 0
+	list-style: none
+	margin: 0
+	padding: 0
 
 .search-tabs > li
-    display: inline-block
+	display: inline-block
 
 .search-tabs > li > a
-    font-size: 12px
-    color: #000000
-    padding: 8px 18px
-    border-radius: 15px
-    display: block
-    margin-bottom: 10px
-    box-shadow: 0 1px 10px 0 rgba(0,0,0,0.12)
-    &:hover
-        text-decoration: none
+	font-size: 12px
+	color: #000000
+	padding: 8px 18px
+	border-radius: 15px
+	display: block
+	margin-bottom: 10px
+	box-shadow: 0 1px 10px 0 rgba(0,0,0,0.12)
+	&:hover
+		text-decoration: none
 
 .mt-25
-    margin-top: 25px
+	margin-top: 25px
 
 .mt-10
-    margin-top: 10px
+	margin-top: 10px
 
 .mb-10
-    margin-bottom: 10px
+	margin-bottom: 10px
 
 .mb-50
-    margin-bottom: 50px
+	margin-bottom: 50px
 
 .mt-50
-    margin-top: 50px
+	margin-top: 50px
 
 .mb-25
-    margin-bottom: 25px
-
+	margin-bottom: 25px

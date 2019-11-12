@@ -117,7 +117,8 @@
 					<form action="" id="notifMail" class="checkout-form mt-25" method="POST">
 						<input type="hidden" name="action" class="form-control" value="notifMail">
 						<div class="count">
-							<span class="label">Действует только на новые заказы, созданные после активации данной
+							<span class="label">Действует только на новые заказы, созданные
+								после активации данной
 								функции.</span>
 							<hr class="grey-hr mt-10">
 						</div>
@@ -138,7 +139,7 @@
 					</form>
 				</div>
 			</div>
-			<div class="panel panel-collapse text-medium" id="accordion">
+			<div class="panel panel-collapse text-medium mb-25" id="accordion">
 				<div class="panel-head">
 					<a href="#filterCollapse" class="panel-title collapsed" data-toggle="collapse">Фильтр заказов</a>
 				</div>
@@ -156,6 +157,25 @@
 						<li><a href="">Завершены</a></li>
 						<li><a href="">Отменены</a></li>
 					</ul>
+				</div>
+			</div>
+			<div class="panel search-list">
+				<div class="tab-content table-responsive">
+					<table class="table table-striped" id="table">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Вид накрутки</th>
+								<th>Количество</th>
+								<th>Потрачено</th>
+								<th width="300">Ссылка</th>
+								<th>Дата/Время</th>
+								<th>Было</th>
+								<th>Осталось</th>
+								<th>Статус</th>
+							</tr>
+						</thead>
+					</table>
 				</div>
 			</div>
 		</div>

@@ -600,6 +600,10 @@ textarea.mass-order-inp {
   width: auto;
   padding: 10px 40px; }
 
+.notif-mail-form > .count > input,
+.notif-mail-form > .count > select {
+  color: #333333; }
+
 @media (max-width: 768px) {
   .btn-notif {
     width: 100%; } }
@@ -657,6 +661,59 @@ textarea.mass-order-inp {
           box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.12); }
   .search-tabs > li > a:hover {
     text-decoration: none; }
+
+.search-total {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.search-amount {
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  font-weight: 700;
+  color: #000000; }
+
+.search-total-sum {
+  color: #000000;
+  background-color: #fff;
+  padding: 8px 18px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.12); }
+
+.my-order-info > h5 {
+  color: #333333; }
+
+.my-order-info {
+  padding: 40px; }
+
+.pay-choice-panel {
+  padding: 40px; }
+
+.pay-choice-panel > h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333; }
+
+input[type="radio"] {
+  margin-right: 4px; }
+
+.badge-standart {
+  font-size: 10px;
+  background-color: #9b9b9b;
+  padding: 2px 8px;
+  border-radius: 15px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-left: 5px; }
 
 .mt-25 {
   margin-top: 25px; }

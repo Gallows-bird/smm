@@ -93,69 +93,25 @@
 	</header>
 	<div class="page-content">
 		<div class="container">
-			<h1 class="page-title  mb-50">Мои заказы</h1>
+			<h1 class="page-title  mb-50">Расходы/пополнения</h1>
 			<hr class="grey-hr">
-			<ul class="panel order-tab-panel mt-25 mb-25">
-				<li class="order-tab active">
-					<a href="#" class="order-tab-link">Instagram</a>
-				</li>
-				<li class="order-tab">
-					<a href="#" class="order-tab-link">Вконтакте</a>
-				</li>
-				<li class="order-tab">
-					<a href="#" class="order-tab-link">YouTube</a>
-				</li>
-				<li class="order-tab">
-					<a href="#" class="order-tab-link">Telegram</a>
-				</li>
-			</ul>
-			<div class="panel panel-collapse text-medium mb-10" id="accordion">
-				<div class="panel-head">
-					<a href="#notifCollapse" class="panel-title collapsed" data-toggle="collapse">Оповещения</a>
-				</div>
-				<div class="panel-body collapse" role="tabpanel" id="notifCollapse">
-					<form action="" id="notifMail" class="checkout-form mt-25 notif-mail-form" method="POST">
-						<input type="hidden" name="action" class="form-control" value="notifMail">
-						<div class="count">
-							<span class="label">Действует только на новые заказы, созданные
-								после активации данной
-								функции.</span>
-							<hr class="grey-hr mt-10">
-						</div>
-						<div class="count mb-10">
-							<span class="label-inp">Оповещать если статус заказа:</span>
-							<select name="alert_new" class="form-control">
-								<option value="0">Не оповещать</option>
-								<option value="1">Готово</option>
-								<option value="2">Отменен</option>
-								<option value="3">Готово или отменен</option>
-							</select>
-						</div>
-						<div class="count mb-10">
-							<span class="label-inp">Email для оповещения:</span>
-							<input type="text" name="mail-alert" class="form-control" placeholder="Ваш Email">
-						</div>
-						<button class="btn btn-notif mb-10" type="submit" name="submit-mail">Сохранить</button>
-					</form>
-				</div>
-			</div>
 			<div class="panel panel-collapse text-medium mb-25" id="accordion">
 				<div class="panel-head">
-					<a href="#filterCollapse" class="panel-title collapsed" data-toggle="collapse">Фильтр заказов</a>
+					<a href="#filterCollapse" class="panel-title collapsed" data-toggle="collapse">Поиск</a>
 				</div>
 				<div class="panel-body collapse" role="tabpanel" id="filterCollapse">
 					<hr class="grey-hr">
 					<form action="get" class="checkout-form">
-						<input type="text" class="form-control search-inp" name="search" placeholder="Ссылка/номер заказа">
+						<input type="text" class="form-control search-inp" name="search" placeholder="Заказ/транзакция">
 						<button type="submit" class="btn-search">
 							<i class="icon-search"></i>
 						</button>
 					</form>
 					<ul class="search-tabs mb-25 mt-10">
 						<li><a href="">Все</a></li>
-						<li><a href="">В работе</a></li>
-						<li><a href="">Завершены</a></li>
-						<li><a href="">Отменены</a></li>
+						<li><a href="">Заказы</a></li>
+						<li><a href="">Возвраты</a></li>
+						<li><a href="">Пополнения</a></li>
 					</ul>
 				</div>
 			</div>
@@ -164,18 +120,16 @@
 					<table class="table table-striped" id="table">
 						<thead>
 							<tr>
-								<th>#</th>
-								<th>Вид накрутки</th>
-								<th>Количество</th>
-								<th>Потрачено</th>
-								<th width="300">Ссылка</th>
-								<th>Дата/Время</th>
+								<th width="100">№ заказа/транзакции</th>
+								<th>Сумма</th>
 								<th>Было</th>
-								<th>Осталось</th>
-								<th>Статус</th>
+								<th>Стало</th>
+								<th>Тип</th>
+								<th>Дата</th>
 							</tr>
 						</thead>
-						<tbody></tbody>
+						<tbody>
+						</tbody>
 					</table>
 				</div>
 			</div>
@@ -183,35 +137,6 @@
 				<div class="search-amount">
 					0
 				</div>
-				<div class="search-total-sum">Потрачено: ₽</div>
-			</div>
-			<div class="panel my-order-info">
-				<h5>Статусы заказов</h5>
-				<hr class="grey-hr">
-				<p>
-					<b>Готово</b> - Заказ завершен успешно. <br>
-					<b>В ожидании</b> - Заказ в очереди. <br>
-					<b>Выполняется</b> - Заказ в процессе накрутки <br>
-					<b>Отменен</b> - Заказ отменен, средства возвращены на баланс. <br>
-					<b>Прерван</b> - Заказ завершен, но не до конца, остаток средств возвращен на баланс.
-				</p>
-				<hr class="grey-hr">
-				<h5>Причины автоматической отмены</h5>
-				<hr class="grey-hr">
-				<p>
-					- Временная ошибка сервера.
-					<br>
-					- Нестабильная услуга.
-					<br>
-					- Не соблюдены условия к аккаунту.
-					<br>
-					- Аккаунт закрыт/Нет аватарки.
-					<br>
-					- Несуществующая ссылка.
-					<br>
-					- Ссылка в неверном формате.
-				</p>
-				</p>
 			</div>
 		</div>
 	</div>

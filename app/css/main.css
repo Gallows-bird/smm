@@ -715,6 +715,14 @@ input[type="radio"] {
   font-weight: 700;
   margin-left: 5px; }
 
+.pay-desc {
+  padding: 40px;
+  font-size: 16px; }
+
+.pay-desc > span {
+  font-weight: 700;
+  color: #000000; }
+
 .mt-25 {
   margin-top: 25px; }
 

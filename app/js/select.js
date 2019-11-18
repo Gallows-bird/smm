@@ -60,3 +60,26 @@ function selectedMode(val) {
         $('#forms').attr('onsubmit', 'newMassOrderMin()');
     }
 }
+
+function checkID() {
+    var soc = document.getElementsByName('soc')[0].value;
+
+    if (soc == "instagram") {
+        var sum = +typeSel1.options[typeSel1.selectedIndex].getAttribute('id') + +typeSel2.options[typeSel2.selectedIndex].getAttribute('id') + +typeSel3.options[typeSel3.selectedIndex].getAttribute('id');
+        console.log(sum);
+    }
+    idDescription(sum);
+}
+
+function idDescription(sum) {
+    var soc = document.getElementsByName('soc') [0].value;
+    if (sum >= 1 && sum <=100) {
+        for (i = 1; i <= 100; i++) {
+            var idDescMin = 'dmin' + i;
+            document.getElementById(idDescMin).style.display = 'none';
+        }
+        var idDescMin = 'dmin' + sum;
+        document.getElementById(idDescMin).style.display = 'block';
+        document.getElementById('dmin0').style.display = 'none';
+    }
+}

@@ -798,7 +798,7 @@ input[type="radio"] {
 .money-tools > strong > span {
   color: #5a0b0b; }
 
-#typeSel1, #typeSel2, #typeSel3, #linksDiv {
+#typeSel1, #typeSel2, #typeSel3, #linksDiv, #dmin1, #dmin2, #dmin3, #dmin4, #dmin5, #dmin6, #dmin7, #dmin8, #dmin9, #dmin10, #dmin11 {
   display: none; }
 
 .mt-25 {

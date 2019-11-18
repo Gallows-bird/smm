@@ -119,7 +119,7 @@
 							<div class="count-wrap">
 								<div class="count">
 									<span class="label-inp">Вид накрутки:</span>
-									<select class="form-control mb-25" name="items" onchange="showHideBlocks(this.value);">
+									<select class="form-control mb-25" name="items" onchange="showHideBlocks(this.value); typeSel1.selectedIndex = 0; typeSel2.selectedIndex = 0; typeSel3.selectedIndex = 0; checkID();">
 										<option value="0">- Не указано -</option>
 										<option value="1">Подписчики</option>
 										<option value="2">Лайки</option>
@@ -128,33 +128,33 @@
 								</div>
 								<div class="count">
 									<span class="label-inp">Тип накрутки (Стоимость за 1000 шт):</span>
-									<select class="form-control mb-25" name="service0" id="typeSel0">
+									<select class="form-control mb-25" name="service0" id="typeSel0" onchange="checkID();">
 										<option value="0">- Не указано -</option>
 									</select>
 
-									<select class="form-control mb-25" name="service1" id="typeSel1">
+									<select class="form-control mb-25" name="service1" id="typeSel1" onchange="checkID();">
 										<option value="0">- Не указано -</option>
-										<option value="189.00" id="typeNum1">Подп[S] - Стандарт - 189 руб</option>
-										<option value="339.00" id="typeNum2">Подп[S] - РФ/СНГ - 399 руб</option>
-										<option value="499.00" id="typeNum3">Подп[S] - Турбо РФ/СНГ - 499 руб</option>
+										<option value="189.00" id="1">Подп[S] - Стандарт - 189 руб</option>
+										<option value="339.00" id="2">Подп[S] - РФ/СНГ - 399 руб</option>
+										<option value="499.00" id="3">Подп[S] - Турбо РФ/СНГ - 499 руб</option>
 									</select>
 
-									<select class="form-control mb-25" name="service2" id="typeSel2">
+									<select class="form-control mb-25" name="service2" id="typeSel2" onchange="checkID();">
 										<option value="0">- Не указано -</option>
-										<option value="75.00" id="typeNum4">Лайки - Медленные - 75 руб</option>
-										<option value="79.00" id="typeNum5">Лайки - Стандарт - 79 руб</option>
-										<option value="99.00" id="typeNum6">Лайки - С охватом - 99 руб</option>
-										<option value="139.00" id="typeNum7">Лайки - Быстрые - 139 руб</option>
-										<option value="159.00" id="typeNum8">Лайки - Турбо - 159 руб</option>
+										<option value="75.00" id="4">Лайки - Медленные - 75 руб</option>
+										<option value="79.00" id="5">Лайки - Стандарт - 79 руб</option>
+										<option value="99.00" id="6">Лайки - С охватом - 99 руб</option>
+										<option value="139.00" id="7">Лайки - Быстрые - 139 руб</option>
+										<option value="159.00" id="8">Лайки - Турбо - 159 руб</option>
 									</select>
 
-									<select class="form-control mb-25" name="service3" id="typeSel3">
+									<select class="form-control mb-25" name="service3" id="typeSel3" onchange="checkID();">
 										<option value="0">- Не указано -</option>
-										<option value="3.00" id="typeNum9">Просмотры - Турбо - 3 руб</option>
-										<option value="0.40" id="typeNum10">Просмотры - 40 коп</option>
-										<option value="0.30" id="typeNum11">Просмотры - 30 коп</option>
-										<option value="0.20" id="typeNum12">Просмотры - 20 коп</option>
-										<option value="0.01" id="typeNum13">Просмотры - 1 коп</option>
+										<option value="3.00" id="9">Просмотры - Турбо - 3 руб</option>
+										<option value="0.40" id="10">Просмотры - 40 коп</option>
+										<option value="0.30" id="11">Просмотры - 30 коп</option>
+										<option value="0.20" id="12">Просмотры - 20 коп</option>
+										<option value="0.01" id="13">Просмотры - 1 коп</option>
 									</select>
 								</div>
 								<div class="count" id="dmin0">

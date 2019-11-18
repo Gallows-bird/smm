@@ -31,7 +31,7 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 });
 
 gulp.task('scripts', function() {
-	return gulp.src('app/js/main.js')
+	return gulp.src('app/js/*.js')
 		.pipe(browserSync.reload({ stream: true }))
 });
 
@@ -89,7 +89,7 @@ gulp.task('clear', function (callback) {
 gulp.task('watch', function() {
 	gulp.watch('app/sass/**/*.sass', gulp.parallel('sass')); // Наблюдение за sass файлами
 	gulp.watch('app/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
-	gulp.watch('app/js/main.js', gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
+	gulp.watch('app/js/*.js', gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
 });
 gulp.task('default', gulp.parallel('sass', 'scripts', 'browser-sync', 'watch'));
 gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass'));

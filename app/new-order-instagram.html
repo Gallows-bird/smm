@@ -119,28 +119,27 @@
 							<div class="count-wrap">
 								<div class="count">
 									<span class="label-inp">Вид накрутки:</span>
-									<select class="form-control" name="items">
+									<select class="form-control mb-25" name="items" onchange="showHideBlocks(this.value);">
 										<option value="0">- Не указано -</option>
 										<option value="1">Подписчики</option>
 										<option value="2">Лайки</option>
 										<option value="3">Просмотры</option>
-										<option value="4">Комментарии</option>
 									</select>
 								</div>
 								<div class="count">
 									<span class="label-inp">Тип накрутки (Стоимость за 1000 шт):</span>
-									<select class="form-control" name="service0" id="typeSel0">
+									<select class="form-control mb-25" name="service0" id="typeSel0">
 										<option value="0">- Не указано -</option>
 									</select>
 
-									<select class="form-control" name="service1" id="typeSel1">
+									<select class="form-control mb-25" name="service1" id="typeSel1">
 										<option value="0">- Не указано -</option>
 										<option value="189.00" id="typeNum1">Подп[S] - Стандарт - 189 руб</option>
 										<option value="339.00" id="typeNum2">Подп[S] - РФ/СНГ - 399 руб</option>
 										<option value="499.00" id="typeNum3">Подп[S] - Турбо РФ/СНГ - 499 руб</option>
 									</select>
 
-									<select class="form-control" name="service2" id="typeSel2">
+									<select class="form-control mb-25" name="service2" id="typeSel2">
 										<option value="0">- Не указано -</option>
 										<option value="75.00" id="typeNum4">Лайки - Медленные - 75 руб</option>
 										<option value="79.00" id="typeNum5">Лайки - Стандарт - 79 руб</option>
@@ -149,7 +148,7 @@
 										<option value="159.00" id="typeNum8">Лайки - Турбо - 159 руб</option>
 									</select>
 
-									<select class="form-control" name="service3" id="type3">
+									<select class="form-control mb-25" name="service3" id="typeSel3">
 										<option value="0">- Не указано -</option>
 										<option value="3.00" id="typeNum9">Просмотры - Турбо - 3 руб</option>
 										<option value="0.40" id="typeNum10">Просмотры - 40 коп</option>
@@ -157,6 +156,510 @@
 										<option value="0.20" id="typeNum12">Просмотры - 20 коп</option>
 										<option value="0.01" id="typeNum13">Просмотры - 1 коп</option>
 									</select>
+								</div>
+								<div class="count" id="dmin0">
+									<span class="label-inp">Краткое описание:</span>
+									<div class="dmin-row">
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Запуск:
+												</span>
+												<br>
+												<p class="dmin-text">
+													-
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Скорость:
+												</span>
+												<br>
+												<p class="dmin-text">
+													-
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Мин/макс:
+												</span>
+												<br>
+												<p class="dmin-text">
+													-
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="count" id="dmin1">
+									<span class="label-inp">Краткое описание:</span>
+									<div class="dmin-row">
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Запуск:
+												</span>
+												<br>
+												<p class="dmin-text">
+													0-10м
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Скорость:
+												</span>
+												<br>
+												<p class="dmin-text">
+													500-2000/д
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Мин/макс:
+												</span>
+												<br>
+												<p class="dmin-text">
+													10/10000
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="count" id="dmin2">
+									<span class="label-inp">Краткое описание:</span>
+									<div class="dmin-row">
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Запуск:
+												</span>
+												<br>
+												<p class="dmin-text">
+													0-48ч
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Скорость:
+												</span>
+												<br>
+												<p class="dmin-text">
+													50-500/д
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Мин/макс:
+												</span>
+												<br>
+												<p class="dmin-text">
+													100/2000
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="count" id="dmin3">
+									<span class="label-inp">Краткое описание:</span>
+									<div class="dmin-row">
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Запуск:
+												</span>
+												<br>
+												<p class="dmin-text">
+													0-12ч
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Скорость:
+												</span>
+												<br>
+												<p class="dmin-text">
+													1000-2000/д
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Мин/макс:
+												</span>
+												<br>
+												<p class="dmin-text">
+													100/1000
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="count" id="dmin4">
+									<span class="label-inp">Краткое описание:</span>
+									<div class="dmin-row">
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Запуск:
+												</span>
+												<br>
+												<p class="dmin-text">
+													0-30м
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Скорость:
+												</span>
+												<br>
+												<p class="dmin-text">
+													10-30/ч
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Мин/макс:
+												</span>
+												<br>
+												<p class="dmin-text">
+													100/1000
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="count" id="dmin5">
+									<span class="label-inp">Краткое описание:</span>
+									<div class="dmin-row">
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Запуск:
+												</span>
+												<br>
+												<p class="dmin-text">
+													0-10м
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Скорость:
+												</span>
+												<br>
+												<p class="dmin-text">
+													50-150/ч
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Мин/макс:
+												</span>
+												<br>
+												<p class="dmin-text">
+													10/10000
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="count" id="dmin6">
+									<span class="label-inp">Краткое описание:</span>
+									<div class="dmin-row">
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Запуск:
+												</span>
+												<br>
+												<p class="dmin-text">
+													0-30м
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Скорость:
+												</span>
+												<br>
+												<p class="dmin-text">
+													5000-10000/ч
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Мин/макс:
+												</span>
+												<br>
+												<p class="dmin-text">
+													50/10000
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="count" id="dmin7">
+									<span class="label-inp">Краткое описание:</span>
+									<div class="dmin-row">
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Запуск:
+												</span>
+												<br>
+												<p class="dmin-text">
+													0-10м
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Скорость:
+												</span>
+												<br>
+												<p class="dmin-text">
+													50-200/ч
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Мин/макс:
+												</span>
+												<br>
+												<p class="dmin-text">
+													100/5000
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="count" id="dmin8">
+									<span class="label-inp">Краткое описание:</span>
+									<div class="dmin-row">
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Запуск:
+												</span>
+												<br>
+												<p class="dmin-text">
+													0-30м
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Скорость:
+												</span>
+												<br>
+												<p class="dmin-text">
+													5000-10000/ч
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Мин/макс:
+												</span>
+												<br>
+												<p class="dmin-text">
+													50/50000
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="count" id="dmin9">
+									<span class="label-inp">Краткое описание:</span>
+									<div class="dmin-row">
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Запуск:
+												</span>
+												<br>
+												<p class="dmin-text">
+													0-10м
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Скорость:
+												</span>
+												<br>
+												<p class="dmin-text">
+													200-300/ч
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Мин/макс:
+												</span>
+												<br>
+												<p class="dmin-text">
+													20/10000
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="count" id="dmin10">
+									<span class="label-inp">Краткое описание:</span>
+									<div class="dmin-row">
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Запуск:
+												</span>
+												<br>
+												<p class="dmin-text">
+													0-20м
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Скорость:
+												</span>
+												<br>
+												<p class="dmin-text">
+													30000-100000/ч
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Мин/макс:
+												</span>
+												<br>
+												<p class="dmin-text">
+													500/100000000
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="count" id="dmin11">
+									<span class="label-inp">Краткое описание:</span>
+									<div class="dmin-row">
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Запуск:
+												</span>
+												<br>
+												<p class="dmin-text">
+													0-20м
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Скорость:
+												</span>
+												<br>
+												<p class="dmin-text">
+													30000-100000/ч
+												</p>
+											</div>
+										</div>
+										<div class="dmin-col">
+											<div class="dmin-card">
+												<span class="label-dmin">
+													Мин/макс:
+												</span>
+												<br>
+												<p class="dmin-text">
+													500/100000000
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="count" id="linkDiv">
+									<span class="label-inp">
+										Ссылка:
+									</span>
+									<input type="text" name="link" id="link" class="form-control quantity mb-25"
+										placeholder="Ссылка на профиль">
+								</div>
+								<div class="count" id="linksDiv">
+									<input type="hidden" id="strqntspan" value="1">
+									<textarea name="links" id="links" rows="8" class="form-control mass-order-inp mb-25"
+										placeholder="Ссылки (каждая с новой строки)"></textarea>
+								</div>
+								<div class="count">
+									<span class="label-inp">Количество:</span>
+									<input type="number" class="form-control quantity mb-25" id="qnt" name="quantity"
+										placeholder="Количество">
+								</div>
+								<div class="count mb-25">
+									<span class="label-inp">Режим:</span>
+									<hr class="grey-hr mt-10 mb-10">
+									<div class="mode">
+										<label class="d-inline-block label-mode">
+											<input type="radio" name="mode" id="checked1" value="1" checked onchange="selectedMode(this);">
+											<span>Обычный заказ</span>
+										</label>
+										<label class="d-inline-block label-mode">
+											<input type="radio" name="mode" id="checked2" value="2" onchange="selectedMode(this);">
+											<span>Массовый заказ</span>
+										</label>
+									</div>
+								</div>
+								<div class="shop-tools">
+									<button class="btn" type="submit" id="sub" name="submit">Запуск</button>
+									<hr class="grey-hr mt-25">
+									<div class="money-tools">
+										<strong>
+											Баланс:
+											<span id="balance" class="content-balance">0.00</span>
+											<span class="rub">₽</span>
+										</strong>
+										<strong>
+											К оплате:
+											<span id="result" class="content-balance">0.00</span>
+											<span class="rub">₽</span>
+										</strong>
+									</div>
+									<hr class="grey-hr mt-25">
 								</div>
 							</div>
 						</form>
@@ -173,6 +676,7 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 		</script>
 	<script src="js/main.js"></script>
+	<script src="js/select.js"></script>
 </body>
 
 </html>

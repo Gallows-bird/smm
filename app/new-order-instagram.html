@@ -119,7 +119,8 @@
 							<div class="count-wrap">
 								<div class="count">
 									<span class="label-inp">Вид накрутки:</span>
-									<select class="form-control mb-25" name="items" onchange="showHideBlocks(this.value); typeSel1.selectedIndex = 0; typeSel2.selectedIndex = 0; typeSel3.selectedIndex = 0; checkID();">
+									<select class="form-control mb-25" name="items"
+										onchange="showHideBlocks(this.value); typeSel1.selectedIndex = 0; typeSel2.selectedIndex = 0; typeSel3.selectedIndex = 0; checkID();">
 										<option value="0">- Не указано -</option>
 										<option value="1">Подписчики</option>
 										<option value="2">Лайки</option>
@@ -134,30 +135,27 @@
 
 									<select class="form-control mb-25" name="service1" id="typeSel1" onchange="checkID();">
 										<option value="0">- Не указано -</option>
-										<option value="189.00" id="1">Подп[S] - Стандарт - 189 руб</option>
-										<option value="339.00" id="2">Подп[S] - РФ/СНГ - 399 руб</option>
-										<option value="499.00" id="3">Подп[S] - Турбо РФ/СНГ - 499 руб</option>
+										<option value="189.00" id="1" class="0">Подп[S] - Стандарт - 189 руб</option>
+										<option value="339.00" id="2" class="0">Подп[S] - РФ/СНГ - 399 руб</option>
+										<option value="499.00" id="3" class="0">Подп[S] - Турбо РФ/СНГ - 499 руб</option>
 									</select>
 
 									<select class="form-control mb-25" name="service2" id="typeSel2" onchange="checkID();">
 										<option value="0">- Не указано -</option>
-										<option value="75.00" id="4">Лайки - Медленные - 75 руб</option>
-										<option value="79.00" id="5">Лайки - Стандарт - 79 руб</option>
-										<option value="99.00" id="6">Лайки - С охватом - 99 руб</option>
-										<option value="139.00" id="7">Лайки - Быстрые - 139 руб</option>
-										<option value="159.00" id="8">Лайки - Турбо - 159 руб</option>
+										<option value="75.00" id="4" class="1">Лайки - Медленные - 75 руб</option>
+										<option value="79.00" id="5" class="1">Лайки - Стандарт - 79 руб</option>
+										<option value="99.00" id="6" class="1">Лайки - С охватом - 99 руб</option>
+										<option value="139.00" id="7" class="1">Лайки - Быстрые - 139 руб</option>
+										<option value="159.00" id="8" class="1">Лайки - Турбо - 159 руб</option>
 									</select>
 
 									<select class="form-control mb-25" name="service3" id="typeSel3" onchange="checkID();">
 										<option value="0">- Не указано -</option>
-										<option value="3.00" id="9">Просмотры - Турбо - 3 руб</option>
-										<option value="0.40" id="10">Просмотры - 40 коп</option>
-										<option value="0.30" id="11">Просмотры - 30 коп</option>
-										<option value="0.20" id="12">Просмотры - 20 коп</option>
-										<option value="0.01" id="13">Просмотры - 1 коп</option>
+										<option value="3.00" id="9" class="1">Просмотры - Турбо - 3 руб</option>
+										<option value="4.00" id="10" class="1">Просмотры - С охватом - 4 руб</option>
 									</select>
 								</div>
-								<div class="count" id="dmin0">
+								<div class="count dmin" id="dmin0">
 									<span class="label-inp">Краткое описание:</span>
 									<div class="dmin-row">
 										<div class="dmin-col">
@@ -195,7 +193,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="count" id="dmin1">
+								<div class="count dmin" id="dmin1">
 									<span class="label-inp">Краткое описание:</span>
 									<div class="dmin-row">
 										<div class="dmin-col">
@@ -233,7 +231,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="count" id="dmin2">
+								<div class="count dmin" id="dmin2">
 									<span class="label-inp">Краткое описание:</span>
 									<div class="dmin-row">
 										<div class="dmin-col">
@@ -271,7 +269,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="count" id="dmin3">
+								<div class="count dmin" id="dmin3">
 									<span class="label-inp">Краткое описание:</span>
 									<div class="dmin-row">
 										<div class="dmin-col">
@@ -309,7 +307,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="count" id="dmin4">
+								<div class="count dmin" id="dmin4">
 									<span class="label-inp">Краткое описание:</span>
 									<div class="dmin-row">
 										<div class="dmin-col">
@@ -347,7 +345,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="count" id="dmin5">
+								<div class="count dmin" id="dmin5">
 									<span class="label-inp">Краткое описание:</span>
 									<div class="dmin-row">
 										<div class="dmin-col">
@@ -385,7 +383,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="count" id="dmin6">
+								<div class="count dmin" id="dmin6">
 									<span class="label-inp">Краткое описание:</span>
 									<div class="dmin-row">
 										<div class="dmin-col">
@@ -423,7 +421,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="count" id="dmin7">
+								<div class="count dmin" id="dmin7">
 									<span class="label-inp">Краткое описание:</span>
 									<div class="dmin-row">
 										<div class="dmin-col">
@@ -461,7 +459,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="count" id="dmin8">
+								<div class="count dmin" id="dmin8">
 									<span class="label-inp">Краткое описание:</span>
 									<div class="dmin-row">
 										<div class="dmin-col">
@@ -499,7 +497,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="count" id="dmin9">
+								<div class="count dmin" id="dmin9">
 									<span class="label-inp">Краткое описание:</span>
 									<div class="dmin-row">
 										<div class="dmin-col">
@@ -537,45 +535,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="count" id="dmin10">
-									<span class="label-inp">Краткое описание:</span>
-									<div class="dmin-row">
-										<div class="dmin-col">
-											<div class="dmin-card">
-												<span class="label-dmin">
-													Запуск:
-												</span>
-												<br>
-												<p class="dmin-text">
-													0-20м
-												</p>
-											</div>
-										</div>
-										<div class="dmin-col">
-											<div class="dmin-card">
-												<span class="label-dmin">
-													Скорость:
-												</span>
-												<br>
-												<p class="dmin-text">
-													30000-100000/ч
-												</p>
-											</div>
-										</div>
-										<div class="dmin-col">
-											<div class="dmin-card">
-												<span class="label-dmin">
-													Мин/макс:
-												</span>
-												<br>
-												<p class="dmin-text">
-													500/100000000
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="count" id="dmin11">
+								<div class="count dmin" id="dmin10">
 									<span class="label-inp">Краткое описание:</span>
 									<div class="dmin-row">
 										<div class="dmin-col">
@@ -622,6 +582,7 @@
 								</div>
 								<div class="count" id="linksDiv">
 									<input type="hidden" id="strqntspan" value="1">
+									<span class="label-inp">Ссылки (Каждая с новой строки):</span>
 									<textarea name="links" id="links" rows="8" class="form-control mass-order-inp mb-25"
 										placeholder="Ссылки (каждая с новой строки)"></textarea>
 								</div>
@@ -658,6 +619,10 @@
 											<span id="result" class="content-balance">0.00</span>
 											<span class="rub">₽</span>
 										</strong>
+										<input type="hidden" value="" name="resultview" id="resultview">
+										<input type="hidden" value="" name="sel_value" id="sel_value">
+										<input type="hidden" value="" name="sel_value_log" id="sel_value_log">
+										<input type="hidden" value="" name="sel_cena" id="sel_cena">
 									</div>
 									<hr class="grey-hr mt-25">
 								</div>

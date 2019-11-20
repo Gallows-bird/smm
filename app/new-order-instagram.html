@@ -120,7 +120,7 @@
 								<div class="count">
 									<span class="label-inp">Вид накрутки:</span>
 									<select class="form-control mb-25" name="items"
-										onchange="showHideBlocks(this.value); typeSel1.selectedIndex = 0; typeSel2.selectedIndex = 0; typeSel3.selectedIndex = 0; checkID();">
+										onchange="showHideBlocks(this.value); typeSel1.selectedIndex = 0; typeSel2.selectedIndex = 0; typeSel3.selectedIndex = 0; checkID(); viewSum();">
 										<option value="0">- Не указано -</option>
 										<option value="1">Подписчики</option>
 										<option value="2">Лайки</option>
@@ -129,18 +129,21 @@
 								</div>
 								<div class="count">
 									<span class="label-inp">Тип накрутки (Стоимость за 1000 шт):</span>
-									<select class="form-control mb-25" name="service0" id="typeSel0" onchange="checkID(); checkPrice();">
+									<select class="form-control mb-25" name="service0" id="typeSel0"
+										onchange="checkID(); checkPrice(); viewSum();">
 										<option value="0">- Не указано -</option>
 									</select>
 
-									<select class="form-control mb-25" name="service1" id="typeSel1" onchange="checkID(); checkPrice();">
+									<select class="form-control mb-25" name="service1" id="typeSel1"
+										onchange="checkID(); checkPrice(); viewSum();">
 										<option value="0">- Не указано -</option>
 										<option value="189.00" id="1" class="0">Подп[S] - Стандарт - 189 руб</option>
 										<option value="339.00" id="2" class="0">Подп[S] - РФ/СНГ - 399 руб</option>
 										<option value="499.00" id="3" class="0">Подп[S] - Турбо РФ/СНГ - 499 руб</option>
 									</select>
 
-									<select class="form-control mb-25" name="service2" id="typeSel2" onchange="checkID(); checkPrice();">
+									<select class="form-control mb-25" name="service2" id="typeSel2"
+										onchange="checkID(); checkPrice(); viewSum();">
 										<option value="0">- Не указано -</option>
 										<option value="75.00" id="4" class="1">Лайки - Медленные - 75 руб</option>
 										<option value="79.00" id="5" class="1">Лайки - Стандарт - 79 руб</option>
@@ -149,7 +152,8 @@
 										<option value="159.00" id="8" class="1">Лайки - Турбо - 159 руб</option>
 									</select>
 
-									<select class="form-control mb-25" name="service3" id="typeSel3" onchange="checkID(); checkPrice();">
+									<select class="form-control mb-25" name="service3" id="typeSel3"
+										onchange="checkID(); checkPrice(); viewSum();">
 										<option value="0">- Не указано -</option>
 										<option value="3.00" id="9" class="1">Просмотры - Турбо - 3 руб</option>
 										<option value="4.00" id="10" class="1">Просмотры - С охватом - 4 руб</option>
@@ -584,23 +588,23 @@
 									<input type="hidden" id="strqntspan" value="1">
 									<span class="label-inp">Ссылки (Каждая с новой строки):</span>
 									<textarea name="links" id="links" rows="8" class="form-control mass-order-inp mb-25"
-										placeholder="Ссылки (каждая с новой строки)"></textarea>
+										placeholder="Ссылки (каждая с новой строки)" onchange="viewSum();"></textarea>
 								</div>
 								<div class="count">
 									<span class="label-inp">Количество:</span>
 									<input type="number" class="form-control quantity mb-25" id="qnt" name="quantity"
-										placeholder="Количество">
+										placeholder="Количество" onchange="viewSum();">
 								</div>
 								<div class="count mb-25">
 									<span class="label-inp">Режим:</span>
 									<hr class="grey-hr mt-10 mb-10">
 									<div class="mode">
 										<label class="d-inline-block label-mode">
-											<input type="radio" name="mode" id="checked1" value="1" checked onchange="selectedMode(this);">
+											<input type="radio" name="mode" id="checked1" value="1" checked onchange="selectedMode(this); viewSum();">
 											<span>Обычный заказ</span>
 										</label>
 										<label class="d-inline-block label-mode">
-											<input type="radio" name="mode" id="checked2" value="2" onchange="selectedMode(this);">
+											<input type="radio" name="mode" id="checked2" value="2" onchange="selectedMode(this); viewSum();">
 											<span>Массовый заказ</span>
 										</label>
 									</div>

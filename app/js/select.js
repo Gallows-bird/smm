@@ -76,7 +76,7 @@ function idDescription(sum, sumlog) {
 	var soc = document.getElementsByName('soc')[0].value;
 	document.getElementById('sel_value_log').value = sumlog;
 	var dminTotal = $('.dmin');
-	
+
 	if (sum >= 1 && sum <= 100) {
 		for (i = 1; i <= dminTotal.length - 1; i++) {
 			var idDescMin = 'dmin' + i;
@@ -85,11 +85,13 @@ function idDescription(sum, sumlog) {
 		var idDescMin = 'dmin' + sum;
 		document.getElementById(idDescMin).style.display = 'block';
 		document.getElementById('dmin0').style.display = 'none';
+		document.getElementById('sel_value').value = sum;
 	} else {
 		for (i = 1; i <= dminTotal.length - 1; i++) {
 			var idDescMin = 'dmin' + i;
 			document.getElementById(idDescMin).style.display = 'none';
 			document.getElementById('dmin0').style.display = 'block';
+			document.getElementById('sel_value').value = 0;
 		}
 	}
 
@@ -114,7 +116,37 @@ function checkPrice() {
 	var sel3 = document.getElementById('typeSel3');
 	var val3 = sel3.options[sel3.selectedIndex].value;
 
-	var sum = val1 + val2 + val3;
+	var sum = +val1 + +val2 + +val3;
 
 	document.getElementById('sel_cena').value = sum;
+}
+
+function viewSum() {
+	var strqntspan = 1;
+
+	if (document.getElementById("strqntspan") != null) {
+		strqntspan = document.getElementById("strqntspan").value;
+		strqntspan = parseInt(strqntspan);
+	}
+
+	var qnt = document.getElementById('qnt');
+	var cena = document.getElementById('sel_cena');
+
+	var resultQnt = document.getElementById('qnt');
+	var resultCena = document.getElementById('sel_cena');
+
+	var resultTotal = document.getElementById('result');
+	var resultView = document.getElementById("resultview");
+
+	var price = parseInt(qnt.value) * cena.value * 0.001 * strqntspan;
+	
+	if(isNaN(price)) {
+		price = 0;
+	}
+
+	resultView.value = price.toFixed(2);
+	resultTotal.innerHTML = price.toFixed(2);
+
+	console.log(price);
+	
 }

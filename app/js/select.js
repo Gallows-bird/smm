@@ -52,12 +52,12 @@ function selectedMode(val) {
 		document.getElementById('linksDiv').style.display = 'none';
 		document.getElementById('linkDiv').style.display = 'block';
 
-		$('#forms').attr('onsubmit', 'newOrder()');
+		$('#orderForm').attr('onsubmit', 'newOrder()');
 	} else if (label == 2) {
 		document.getElementById('linksDiv').style.display = 'block';
 		document.getElementById('linkDiv').style.display = 'none';
 
-		$('#forms').attr('onsubmit', 'newMassOrderMin()');
+		$('#orderForm').attr('onsubmit', 'newMassOrderMin()');
 	}
 }
 
@@ -92,4 +92,29 @@ function idDescription(sum, sumlog) {
 			document.getElementById('dmin0').style.display = 'block';
 		}
 	}
+
+	if (sumlog == 0) {
+		document.getElementById('link').placeholder = 'Ссылка на профиль';
+	} else if (sumlog == 1) {
+		document.getElementById('link').placeholder = 'Ссылка на публикацию';
+	} else if (sumlog == 2) {
+		document.getElementById('link').placeholder = 'Ссылка на публикацию';
+	}
+}
+
+function checkPrice() {
+	var soc = document.getElementsByName('soc')[0].value;
+
+	var sel1 = document.getElementById('typeSel1');
+	var val1 = sel1.options[sel1.selectedIndex].value;
+
+	var sel2 = document.getElementById('typeSel2');
+	var val2 = sel2.options[sel2.selectedIndex].value;
+
+	var sel3 = document.getElementById('typeSel3');
+	var val3 = sel3.options[sel3.selectedIndex].value;
+
+	var sum = val1 + val2 + val3;
+
+	document.getElementById('sel_cena').value = sum;
 }

@@ -80,17 +80,25 @@ function idDescription(sum, sumlog) {
 	if (sum >= 1 && sum <= 100) {
 		for (i = 1; i <= dminTotal.length - 1; i++) {
 			var idDescMin = 'dmin' + i;
+			var idDesc = 'd' + i;
 			document.getElementById(idDescMin).style.display = 'none';
+			document.getElementById(idDesc).style.display = 'none';
+
 		}
 		var idDescMin = 'dmin' + sum;
+		var idDesc = 'd' + sum;
 		document.getElementById(idDescMin).style.display = 'block';
 		document.getElementById('dmin0').style.display = 'none';
+		document.getElementById(idDesc).style.display = 'block';
+		document.getElementById('d0').style.display = 'none';
 		document.getElementById('sel_value').value = sum;
 	} else {
 		for (i = 1; i <= dminTotal.length - 1; i++) {
 			var idDescMin = 'dmin' + i;
 			document.getElementById(idDescMin).style.display = 'none';
+			document.getElementById(idDesc).style.display = 'none';
 			document.getElementById('dmin0').style.display = 'block';
+			document.getElementById('d0').style.display = 'block';
 			document.getElementById('sel_value').value = 0;
 		}
 	}
@@ -132,21 +140,24 @@ function viewSum() {
 	var qnt = document.getElementById('qnt');
 	var cena = document.getElementById('sel_cena');
 
-	var resultQnt = document.getElementById('qnt');
-	var resultCena = document.getElementById('sel_cena');
-
 	var resultTotal = document.getElementById('result');
 	var resultView = document.getElementById("resultview");
 
 	var price = parseInt(qnt.value) * cena.value * 0.001 * strqntspan;
-	
-	if(isNaN(price)) {
+
+	if (isNaN(price)) {
 		price = 0;
 	}
 
 	resultView.value = price.toFixed(2);
 	resultTotal.innerHTML = price.toFixed(2);
 
-	console.log(price);
-	
+}
+
+function strqnt() {
+	var ta = document.getElementById('links'),
+		text = ta.value,
+		lines = text.split(/\n/),
+		count = lines.length;
+	document.getElementById('strqntspan').value = count;
 }

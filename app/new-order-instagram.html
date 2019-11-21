@@ -110,9 +110,9 @@
 					</ul>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row justify-content-between">
 				<div class="col-md-6">
-					<div class="panel order-params">
+					<div class="panel order-params mb-25">
 						<form action="" class="order-form" id="orderForm" onsubmit="newOrder()">
 							<input type="hidden" value="instagram" name="soc" id="soc">
 							<input type="hidden" value="newOrder" name="action">
@@ -120,7 +120,7 @@
 								<div class="count">
 									<span class="label-inp">Вид накрутки:</span>
 									<select class="form-control mb-25" name="items"
-										onchange="showHideBlocks(this.value); typeSel1.selectedIndex = 0; typeSel2.selectedIndex = 0; typeSel3.selectedIndex = 0; checkID(); viewSum();">
+										onchange="showHideBlocks(this.value); typeSel1.selectedIndex = 0; typeSel2.selectedIndex = 0; typeSel3.selectedIndex = 0; checkID(); sel_cena.value = 0; viewSum();">
 										<option value="0">- Не указано -</option>
 										<option value="1">Подписчики</option>
 										<option value="2">Лайки</option>
@@ -588,23 +588,23 @@
 									<input type="hidden" id="strqntspan" value="1">
 									<span class="label-inp">Ссылки (Каждая с новой строки):</span>
 									<textarea name="links" id="links" rows="8" class="form-control mass-order-inp mb-25"
-										placeholder="Ссылки (каждая с новой строки)" onchange="viewSum();"></textarea>
+										placeholder="Ссылки (каждая с новой строки)" onchange="strqnt(); viewSum();" onkeyup="strqnt(); viewSum();" onclick="strqnt(); viewSum();"></textarea>
 								</div>
 								<div class="count">
 									<span class="label-inp">Количество:</span>
 									<input type="number" class="form-control quantity mb-25" id="qnt" name="quantity"
-										placeholder="Количество" onchange="viewSum();">
+										placeholder="Количество" onchange="viewSum();" onclick="viewSum();" onkeyup="viewSum();">
 								</div>
 								<div class="count mb-25">
 									<span class="label-inp">Режим:</span>
 									<hr class="grey-hr mt-10 mb-10">
 									<div class="mode">
 										<label class="d-inline-block label-mode">
-											<input type="radio" name="mode" id="checked1" value="1" checked onchange="selectedMode(this); viewSum();">
+											<input type="radio" name="mode" id="checked1" value="1" checked onchange="selectedMode(this); strqntspan.value = 1; viewSum();">
 											<span>Обычный заказ</span>
 										</label>
 										<label class="d-inline-block label-mode">
-											<input type="radio" name="mode" id="checked2" value="2" onchange="selectedMode(this); viewSum();">
+											<input type="radio" name="mode" id="checked2" value="2" onchange="selectedMode(this); strqnt(); viewSum();">
 											<span>Массовый заказ</span>
 										</label>
 									</div>
@@ -632,6 +632,59 @@
 								</div>
 							</div>
 						</form>
+					</div>
+				</div>
+				<div class="col-md-5" id="d0">
+					<div class="panel desc-panel">
+						<span class="desc-title">Запуск:</span>
+						<p class="mb-25">Выберите услугу</p>
+						<span class="desc-title">Скорость накрутки:</span>
+						<p>Выберите услугу</p>
+						<span class="desc-title">Детали:</span>
+						<p>Выберите услугу</p>
+						<hr class="grey-hr">
+						<span class="desc-title">Минимальный заказ:</span>
+						<p>0</p>
+						<span class="desc-title">Максимальный заказ:</span>
+						<p>0</p>
+						<hr class="grey-hr">
+						<span class="desc-title">Требования к аккаунту:</span>
+						<p></p>
+					</div>
+				</div>
+				<div class="col-md-5" id="d1">
+					<div class="panel desc-panel">
+						<span class="desc-title">Запуск:</span>
+						<p class="mb-25">В течение 0-10 минут</p>
+						<span class="desc-title">Скорость накрутки:</span>
+						<p>500-2000 в сутки</p>
+						<span class="desc-title">Детали:</span>
+						<p>- Боты/Офферы
+							<br>
+							- С аватарками
+							<br>
+							- Среднее качество
+							<br>
+							- Списания во время и после накрутки (50-100%)
+							<br>
+							- Быстрый запуск
+							<br>
+							- Средняя скорость
+							<br>
+							<br>
+							<i>В связи с обновлениями со стороны инстаграм, наблюдается очень много списаний (до 100%).
+								<br>
+								Заказывая, вы соглашаетесь с этим. Претензии не принимаются.
+							</i>
+						</p>
+						<hr class="grey-hr">
+						<span class="desc-title">Минимальный заказ:</span>
+						<p>10</p>
+						<span class="desc-title">Максимальный заказ:</span>
+						<p>10000</p>
+						<hr class="grey-hr">
+						<span class="desc-title">Требования к аккаунту:</span>
+						<p>Должен быть открытым и иметь аватарку</p>
 					</div>
 				</div>
 			</div>

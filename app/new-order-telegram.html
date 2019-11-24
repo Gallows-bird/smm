@@ -95,7 +95,7 @@
 			<div class="row">
 				<div class="col-12">
 					<ul class="panel order-tab-panel mb-50">
-						<li class="order-tab active">
+						<li class="order-tab">
 							<a href="new-order-instagram.html" class="order-tab-link">Instagram</a>
 						</li>
 						<li class="order-tab">
@@ -104,7 +104,7 @@
 						<li class="order-tab">
 							<a href="new-order-youtube.html" class="order-tab-link">YouTube</a>
 						</li>
-						<li class="order-tab">
+						<li class="order-tab active">
 							<a href="new-order-telegram.html" class="order-tab-link">Telegram</a>
 						</li>
 					</ul>
@@ -114,7 +114,7 @@
 				<div class="col-md-6">
 					<div class="panel order-params mb-25">
 						<form action="" class="order-form" id="orderForm" onsubmit="newOrder()">
-							<input type="hidden" value="instagram" name="soc" id="soc">
+							<input type="hidden" value="telegram" name="soc" id="soc">
 							<input type="hidden" value="newOrder" name="action">
 							<div class="count-wrap">
 								<div class="count">
@@ -122,8 +122,8 @@
 									<select class="form-control mb-25" name="items"
 										onchange="showHideBlocks(this.value); typeSel1.selectedIndex = 0; typeSel2.selectedIndex = 0; typeSel3.selectedIndex = 0; checkID(); sel_cena.value = 0; viewSum();">
 										<option value="0">- Не указано -</option>
-										<option value="1">Подписчики</option>
-										<option value="2">Лайки</option>
+										<option value="1">Подписчики на канал</option>
+										<option value="2">Подписчики в группу</option>
 										<option value="3">Просмотры</option>
 									</select>
 								</div>
@@ -137,26 +137,23 @@
 									<select class="form-control mb-25" name="service1" id="typeSel1"
 										onchange="checkID(); checkPrice(); viewSum();">
 										<option value="0">- Не указано -</option>
-										<option value="189.00" id="1" class="0">Подп[S] - Стандарт - 189 руб</option>
-										<option value="339.00" id="2" class="0">Подп[S] - РФ/СНГ - 399 руб</option>
-										<option value="499.00" id="3" class="0">Подп[S] - Турбо РФ/СНГ - 499 руб</option>
+										<option value="89.00" id="1" class="0">Подписчики - На канал - 89 руб</option>
+										<option value="99.00" id="2" class="0">Подписчики - На канал - 99 руб</option>
+										<option value="139.00" id="3" class="0">Подписчики - На канал - 139 руб</option>
+										<option value="210.00" id="4" class="0">Подписчики - На канал - 210 руб</option>
 									</select>
 
 									<select class="form-control mb-25" name="service2" id="typeSel2"
 										onchange="checkID(); checkPrice(); viewSum();">
 										<option value="0">- Не указано -</option>
-										<option value="75.00" id="4" class="1">Лайки - Медленные - 75 руб</option>
-										<option value="79.00" id="5" class="1">Лайки - Стандарт - 79 руб</option>
-										<option value="99.00" id="6" class="1">Лайки - С охватом - 99 руб</option>
-										<option value="139.00" id="7" class="1">Лайки - Быстрые - 139 руб</option>
-										<option value="159.00" id="8" class="1">Лайки - Турбо - 159 руб</option>
+										<option value="220.00" id="5" class="0">Подписчики - В группу - 220 руб</option>
 									</select>
 
 									<select class="form-control mb-25" name="service3" id="typeSel3"
 										onchange="checkID(); checkPrice(); viewSum();">
 										<option value="0">- Не указано -</option>
-										<option value="3.00" id="9" class="1">Просмотры - Турбо - 3 руб</option>
-										<option value="4.00" id="10" class="1">Просмотры - С охватом - 4 руб</option>
+										<option value="49.00" id="6" class="1">Просмотры - Турбо - 49 руб</option>
+										<option value="59.00" id="7" class="1">Просмотры - Турбо - 59 руб</option>
 									</select>
 								</div>
 								<div class="count dmin" id="dmin0">
@@ -435,44 +432,6 @@
 												</span>
 												<br>
 												<p class="dmin-text">
-													0-10м
-												</p>
-											</div>
-										</div>
-										<div class="dmin-col">
-											<div class="dmin-card">
-												<span class="label-dmin">
-													Скорость:
-												</span>
-												<br>
-												<p class="dmin-text">
-													50-200/ч
-												</p>
-											</div>
-										</div>
-										<div class="dmin-col">
-											<div class="dmin-card">
-												<span class="label-dmin">
-													Мин/макс:
-												</span>
-												<br>
-												<p class="dmin-text">
-													100/5000
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="count dmin" id="dmin8">
-									<span class="label-inp">Краткое описание:</span>
-									<div class="dmin-row">
-										<div class="dmin-col">
-											<div class="dmin-card">
-												<span class="label-dmin">
-													Запуск:
-												</span>
-												<br>
-												<p class="dmin-text">
 													0-30м
 												</p>
 											</div>
@@ -495,83 +454,7 @@
 												</span>
 												<br>
 												<p class="dmin-text">
-													50/50000
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="count dmin" id="dmin9">
-									<span class="label-inp">Краткое описание:</span>
-									<div class="dmin-row">
-										<div class="dmin-col">
-											<div class="dmin-card">
-												<span class="label-dmin">
-													Запуск:
-												</span>
-												<br>
-												<p class="dmin-text">
-													0-10м
-												</p>
-											</div>
-										</div>
-										<div class="dmin-col">
-											<div class="dmin-card">
-												<span class="label-dmin">
-													Скорость:
-												</span>
-												<br>
-												<p class="dmin-text">
-													200-300/ч
-												</p>
-											</div>
-										</div>
-										<div class="dmin-col">
-											<div class="dmin-card">
-												<span class="label-dmin">
-													Мин/макс:
-												</span>
-												<br>
-												<p class="dmin-text">
-													20/10000
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="count dmin" id="dmin10">
-									<span class="label-inp">Краткое описание:</span>
-									<div class="dmin-row">
-										<div class="dmin-col">
-											<div class="dmin-card">
-												<span class="label-dmin">
-													Запуск:
-												</span>
-												<br>
-												<p class="dmin-text">
-													0-20м
-												</p>
-											</div>
-										</div>
-										<div class="dmin-col">
-											<div class="dmin-card">
-												<span class="label-dmin">
-													Скорость:
-												</span>
-												<br>
-												<p class="dmin-text">
-													30000-100000/ч
-												</p>
-											</div>
-										</div>
-										<div class="dmin-col">
-											<div class="dmin-card">
-												<span class="label-dmin">
-													Мин/макс:
-												</span>
-												<br>
-												<p class="dmin-text">
-													500/100000000
+													50/10000
 												</p>
 											</div>
 										</div>
@@ -844,7 +727,7 @@
 				<div class="col-md-5" id="d7">
 					<div class="panel desc-panel">
 						<span class="desc-title">Запуск:</span>
-						<p class="mb-25">В течение 0-20 минут</p>
+						<p class="mb-25">В течение 0-30 минут</p>
 						<span class="desc-title">Скорость накрутки:</span>
 						<p>5000-10000 в час</p>
 						<span class="desc-title">Детали:</span>
@@ -856,96 +739,14 @@
 							<br>
 							- Быстрый запуск
 							<br>
-						</p>
-						<hr class="grey-hr">
-						<span class="desc-title">Минимальный заказ:</span>
-						<p>10</p>
-						<span class="desc-title">Максимальный заказ:</span>
-						<p>30000</p>
-						<hr class="grey-hr">
-						<span class="desc-title">Требования к аккаунту:</span>
-						<p>Должен быть открытым и иметь аватарку</p>
-					</div>
-				</div>
-				<div class="col-md-5" id="d8">
-					<div class="panel desc-panel">
-						<span class="desc-title">Запуск:</span>
-						<p class="mb-25">В течение 0-10 минут</p>
-						<span class="desc-title">Скорость накрутки:</span>
-						<p>50-200 в час</p>
-						<span class="desc-title">Детали:</span>
-						<p>- Боты/Офферы
-							<br>
-							- С аватарками/публикациями и без
-							<br>
-							- Средняя скорость
-							<br>
-							- Быстрый запуск
-							<br>
-							<br>
-							- Вместе с лайками увеличивается показатель охвата и показы
-							<br>
-							<br>
-							P.S. Статистика обновляется с небольшой задержкой
-						</p>
-						<hr class="grey-hr">
-						<span class="desc-title">Минимальный заказ:</span>
-						<p>100</p>
-						<span class="desc-title">Максимальный заказ:</span>
-						<p>5000</p>
-						<hr class="grey-hr">
-						<span class="desc-title">Требования к аккаунту:</span>
-						<p>Должен быть открытым и иметь аватарку</p>
-					</div>
-				</div>
-				<div class="col-md-5" id="d9">
-					<div class="panel desc-panel">
-						<span class="desc-title">Запуск:</span>
-						<p class="mb-25">В течение 0-20 минут</p>
-						<span class="desc-title">Скорость накрутки:</span>
-						<p>30000-100000 в час</p>
-						<span class="desc-title">Детали:</span>
-						<p>- Боты/Офферы
-							<br>
-							- Высокая скорость
-							<br>
-							- Быстрый запуск
+							- Тестовая позиция
 							<br>
 						</p>
 						<hr class="grey-hr">
 						<span class="desc-title">Минимальный заказ:</span>
-						<p>500</p>
+						<p>50</p>
 						<span class="desc-title">Максимальный заказ:</span>
-						<p>100000000</p>
-						<hr class="grey-hr">
-						<span class="desc-title">Требования к аккаунту:</span>
-						<p>Должен быть открытым и иметь аватарку</p>
-					</div>
-				</div>
-				<div class="col-md-5" id="d10">
-					<div class="panel desc-panel">
-						<span class="desc-title">Запуск:</span>
-						<p class="mb-25">В течение 0-20 минут</p>
-						<span class="desc-title">Скорость накрутки:</span>
-						<p>30000-100000 в час</p>
-						<span class="desc-title">Детали:</span>
-						<p>- Боты/Офферы
-							<br>
-							- Высокая скорость
-							<br>
-							- Быстрый запуск
-							<br>
-							<br>
-							- Вместе с просмотрами увеличиваются показатели статистики (частично)
-							<br>
-							<br>
-							P.S. Статистика обновляется с небольшой задержкой
-						</p>
-						<hr class="grey-hr">
-						<span class="desc-title">Минимальный заказ:</span>
-						<p>500</p>
-						<span class="desc-title">Максимальный заказ:</span>
-						<p>100000000</p>
+						<p>20000</p>
 						<hr class="grey-hr">
 						<span class="desc-title">Требования к аккаунту:</span>
 						<p>Должен быть открытым и иметь аватарку</p>
@@ -953,16 +754,23 @@
 				</div>
 			</div>
 			<div class="panel order-rules-panel mt-25">
-				<p class="text-left text-md-center">⚡️&nbsp;-&nbsp;Быстрый&nbsp;запуск&emsp;&emsp;★&nbsp;-&nbsp;Рекомендуем&emsp;&emsp;♻&nbsp;-&nbsp;Гарантия&nbsp;/&nbsp;Докрутка</p>
-				<hr class="grey-hr">
-				<p class="text-left text-md-center">[S]&nbsp;-&nbsp;Стандартная&nbsp;услуга&emsp;&emsp;[G]&nbsp;-&nbsp;Гарантийная&nbsp;услуга&emsp;&emsp;[N]&nbsp;-&nbsp;Нестабильная&nbsp;услуга</p>
-				<hr class="grey-hr">
-				<p class="text-left text-md-center">- Во время накрутки ваш аккаунт должен быть открытым, а логин/ник/адрес страницы не должен изменяться! Иначе задание будет выполнено в пустую, без возврата средств!
-					<br>
-					- Запрещается одновременный запуск однотипных услуг на одну ссылку или же накрутка с помощью разных сайтов/сервисов! Это приведет к недокруту, без возврата средств!
+				<p class="text-left text-md-center">
+					⚡️&nbsp;-&nbsp;Быстрый&nbsp;запуск&emsp;&emsp;★&nbsp;-&nbsp;Рекомендуем&emsp;&emsp;♻&nbsp;-&nbsp;Гарантия&nbsp;/&nbsp;Докрутка
 				</p>
 				<hr class="grey-hr">
-				<p class="mb-25 text-left text-md-center">- Отмена заказов не возможна, ни при каких обстоятельствах! Если была допущена ошибка, заказ будет отменен автоматически в течение некоторого времени...
+				<p class="text-left text-md-center">
+					[S]&nbsp;-&nbsp;Стандартная&nbsp;услуга&emsp;&emsp;[G]&nbsp;-&nbsp;Гарантийная&nbsp;услуга&emsp;&emsp;[N]&nbsp;-&nbsp;Нестабильная&nbsp;услуга
+				</p>
+				<hr class="grey-hr">
+				<p class="text-left text-md-center">- Во время накрутки ваш аккаунт должен быть открытым, а логин/ник/адрес
+					страницы не должен изменяться! Иначе задание будет выполнено в пустую, без возврата средств!
+					<br>
+					- Запрещается одновременный запуск однотипных услуг на одну ссылку или же накрутка с помощью разных
+					сайтов/сервисов! Это приведет к недокруту, без возврата средств!
+				</p>
+				<hr class="grey-hr">
+				<p class="mb-25 text-left text-md-center">- Отмена заказов не возможна, ни при каких обстоятельствах! Если была
+					допущена ошибка, заказ будет отменен автоматически в течение некоторого времени...
 					<br>
 					- Претензии по нестабильным, тестовым и запасным услугам не принимаются!
 					<br>

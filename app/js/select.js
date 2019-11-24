@@ -9,6 +9,9 @@ function showHideBlocks(val) {
 		document.getElementById('checked1').checked = true;
 		document.getElementById('linksDiv').style.display = 'none';
 		document.getElementById('linkDiv').style.display = 'block';
+		if (soc == 'vk') {
+			document.getElementById('typeSel4').style.display = 'none';
+		}
 
 		$('#forms').attr('onsubmit', 'newOrder()');
 	} else if (val == 1) {
@@ -19,6 +22,9 @@ function showHideBlocks(val) {
 		document.getElementById('checked1').checked = true;
 		document.getElementById('linksDiv').style.display = 'none';
 		document.getElementById('linkDiv').style.display = 'block';
+		if (soc == 'vk') {
+			document.getElementById('typeSel4').style.display = 'none';
+		}
 
 		$('#forms').attr('onsubmit', 'newOrder()');
 	} else if (val == 2) {
@@ -29,6 +35,9 @@ function showHideBlocks(val) {
 		document.getElementById('checked1').checked = true;
 		document.getElementById('linksDiv').style.display = 'none';
 		document.getElementById('linkDiv').style.display = 'block';
+		if (soc == 'vk') {
+			document.getElementById('typeSel4').style.display = 'none';
+		}
 
 		$('#forms').attr('onsubmit', 'newOrder()');
 	} else if (val == 3) {
@@ -39,6 +48,22 @@ function showHideBlocks(val) {
 		document.getElementById('checked1').checked = true;
 		document.getElementById('linksDiv').style.display = 'none';
 		document.getElementById('linkDiv').style.display = 'block';
+		if (soc == 'vk') {
+			document.getElementById('typeSel4').style.display = 'none';
+		}
+
+		$('#forms').attr('onsubmit', 'newOrder()');
+	} else if (val == 4) {
+		document.getElementById('typeSel0').style.display = 'none';
+		document.getElementById('typeSel1').style.display = 'none';
+		document.getElementById('typeSel2').style.display = 'none';
+		document.getElementById('typeSel3').style.display = 'none';
+		document.getElementById('checked1').checked = true;
+		document.getElementById('linksDiv').style.display = 'none';
+		document.getElementById('linkDiv').style.display = 'block';
+		if (soc == 'vk') {
+			document.getElementById('typeSel4').style.display = 'block';
+		}
 
 		$('#forms').attr('onsubmit', 'newOrder()');
 	}
@@ -64,11 +89,16 @@ function selectedMode(val) {
 function checkID() {
 	var soc = document.getElementsByName('soc')[0].value;
 
-	if (soc == "instagram") {
+	if (soc == "instagram" || soc == "youtube" || soc == 'telegram') {
 		var sum = +typeSel1.options[typeSel1.selectedIndex].getAttribute('id') + +typeSel2.options[typeSel2.selectedIndex].getAttribute('id') + +typeSel3.options[typeSel3.selectedIndex].getAttribute('id');
 		var sumlog = +typeSel1.options[typeSel1.selectedIndex].getAttribute('class') + +typeSel2.options[typeSel2.selectedIndex].getAttribute('class') + +typeSel3.options[typeSel3.selectedIndex].getAttribute('class');
-
 	}
+
+	if (soc == "vk") {
+		var sum = +typeSel1.options[typeSel1.selectedIndex].getAttribute('id') + +typeSel2.options[typeSel2.selectedIndex].getAttribute('id') + +typeSel3.options[typeSel3.selectedIndex].getAttribute('id') + +typeSel4.options[typeSel4.selectedIndex].getAttribute('id');
+		var sumlog = +typeSel1.options[typeSel1.selectedIndex].getAttribute('class') + +typeSel2.options[typeSel2.selectedIndex].getAttribute('class') + +typeSel3.options[typeSel3.selectedIndex].getAttribute('class') + +typeSel4.options[typeSel4.selectedIndex].getAttribute('class');
+	}
+
 	idDescription(sum, sumlog);
 }
 
@@ -88,13 +118,14 @@ function idDescription(sum, sumlog) {
 		var idDescMin = 'dmin' + sum;
 		var idDesc = 'd' + sum;
 		document.getElementById(idDescMin).style.display = 'block';
-		document.getElementById('dmin0').style.display = 'none';
 		document.getElementById(idDesc).style.display = 'block';
+		document.getElementById('dmin0').style.display = 'none';
 		document.getElementById('d0').style.display = 'none';
 		document.getElementById('sel_value').value = sum;
 	} else {
 		for (i = 1; i <= dminTotal.length - 1; i++) {
 			var idDescMin = 'dmin' + i;
+			var idDesc = 'd' + i;
 			document.getElementById(idDescMin).style.display = 'none';
 			document.getElementById(idDesc).style.display = 'none';
 			document.getElementById('dmin0').style.display = 'block';
@@ -125,6 +156,13 @@ function checkPrice() {
 	var val3 = sel3.options[sel3.selectedIndex].value;
 
 	var sum = +val1 + +val2 + +val3;
+
+	if (soc == 'vk') {
+		var sel4 = document.getElementById('typeSel4');
+		var val4 = sel4.options[sel4.selectedIndex].value;
+
+		var sum = +val1 + +val2 + +val3 + +val4;
+	}
 
 	document.getElementById('sel_cena').value = sum;
 }

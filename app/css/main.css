@@ -814,6 +814,12 @@ input[type="radio"] {
 .order-rules-panel {
   padding: 40px; }
 
+.panel-settings {
+  padding: 40px; }
+  .panel-settings h5 {
+    color: #333333;
+    font-size: 20px; }
+
 .mt-25 {
   margin-top: 25px; }
 

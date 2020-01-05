@@ -10,17 +10,6 @@ $(document).ready(function() {
         burgerAnimate.removeClass('nav-toggle--active');
     });
 
-    // index animate
-    $('.index-top').fadeIn(1500);
-
-    $(function() {
-        var indexBtnTop = $('.index-btn-top');
-        indexBtnTop.animate({
-            marginTop: '50px',
-            opacity: 1
-        }, 800);
-    });
-
     // price tablist
     var tab = document.querySelectorAll('.order-tab-link'),
         headerTab = document.querySelector('.order-tab-panel'),

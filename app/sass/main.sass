@@ -1,8 +1,9 @@
 body
-	font-family: 'Exo 2', sans-serif
+	font-family: 'Roboto', sans-serif
 	background-color: #f7f5ff
 	color: #666666
 	font-size: 14px
+	overflow: hidden
 
 @media (max-width: 768px)
 	.container
@@ -20,7 +21,7 @@ button:focus
 	box-shadow: none
 
 .page-header
-	background-color: #373544
+	background-color: #131313
 	position: fixed
 	width: 100%
 	z-index: 1
@@ -69,9 +70,14 @@ button:focus
 	&::before
 		transform: rotate(-45deg)
 
-.navbar
-	padding-bottom: 0px
-	padding-top: 0px
+.navbar-brand span
+	color: #ffffff
+	text-transform: uppercase
+	font-weight: 700
+	margin-left: 25px
+	&:hover
+		text-shadow: 0 0 20px #fff
+		transition: text-shadow 0.3s
 
 .nav-link
 	color: #ffffff
@@ -83,7 +89,7 @@ button:focus
 	text-align: center
 	&:hover
 		color: #fff
-		background-color: #2C2B33
+		background-color: #6e72f2
 		transition: all 0.3s
 
 .navbar-collapse
@@ -123,13 +129,8 @@ button:focus
 		padding-left: 0
 
 .index-main
-	background-image: url(../img/index2.jpg)
-	background-size: cover
-	background-position: center
-	background-repeat: no-repeat
 	height: 100vh
-	background-color: rgba(55, 53, 68, 0.004)
-	overflow: hidden
+	background-color: #131313
 
 .index-section
 	color: #ffffff
@@ -181,9 +182,6 @@ button:focus
 		display: block
 		padding: 10px 25px
 
-.index-top
-	display: none
-
 .white-hr
 	background-color: #fff
 	margin-top: 25px
@@ -198,11 +196,6 @@ button:focus
 
 .index-bottom
 	display: block
-
-.index-btn-top
-	text-align: center
-	margin-top: 100px
-	opacity: 0
 
 .modal-content
 	border-radius: 15px
@@ -724,3 +717,82 @@ input[type="radio"]
 
 .mb-25
 	margin-bottom: 25px
+
+
+// stars
+// n is number of stars required
+@function multiple-box-shadow ($n)   
+  $value: '#{random(2000)}px #{random(2000)}px #FFF' // height 
+  @for $i from 2 through $n
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+  @return unquote($value)
+
+$shadows-small:  multiple-box-shadow(700)
+$shadows-medium: multiple-box-shadow(200)
+$shadows-big:    multiple-box-shadow(100)
+
+html 
+  height: 100%
+  overflow: hidden
+  
+.stars
+  background: transparent  
+    
+#stars1
+  width: 1px
+  height: 1px
+  animation: animStar 50s linear infinite
+    
+  &:after
+    content: " "
+    position: absolute
+    top: 2000px
+    width: 1px
+    height: 1px
+    background: transparent
+    box-shadow: $shadows-small
+    
+#stars2
+  width: 2px
+  height: 2px
+  background: transparent
+  box-shadow: $shadows-medium
+  animation: animStar 100s linear infinite
+    
+  &:after
+    content: " "
+    position: absolute
+    top: 2000px
+    width: 2px
+    height: 2px
+    background: transparent
+    box-shadow: $shadows-medium
+    
+#stars3
+  width: 3px
+  height: 3px
+  background: transparent
+  box-shadow: $shadows-big
+  animation: animStar 150s linear infinite
+    
+  &:after
+    content: " "
+    position: absolute
+    top: 2000px
+    width: 3px
+    height: 3px
+    background: transparent
+    box-shadow: $shadows-big
+    
+@keyframes animStar
+  from	
+    transform: translateY(0px)
+  to		
+    transform: translateY(-2000px)
+    
+// stars end
+
+
+#Capa_1
+	width: 82px
+	height: 54px

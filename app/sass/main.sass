@@ -1,9 +1,8 @@
 body
 	font-family: 'Roboto', sans-serif
-	background-color: #f7f5ff
+	background-color: #daddff
 	color: #666666
 	font-size: 14px
-	overflow: hidden
 
 @media (max-width: 768px)
 	.container
@@ -26,6 +25,8 @@ button:focus
 	width: 100%
 	z-index: 1
 	top: 0
+	padding-left: 50px
+	padding-right: 50px
 
 .nav-toggle
 	width: 36px
@@ -74,7 +75,7 @@ button:focus
 	color: #ffffff
 	text-transform: uppercase
 	font-weight: 700
-	margin-left: 25px
+	margin-left: 10px
 	&:hover
 		text-shadow: 0 0 20px #fff
 		transition: text-shadow 0.3s
@@ -82,8 +83,12 @@ button:focus
 .nav-link
 	color: #ffffff
 	font-size: 14px
+	display: flex
+	justify-content: center
+	align-items: center
 	font-weight: 400
 	padding-top: 24px
+	margin-right: 20px
 	padding-bottom: 24px
 	transition: all 0.3s
 	text-align: center
@@ -92,22 +97,15 @@ button:focus
 		background-color: #6e72f2
 		transition: all 0.3s
 
+.nav-link img
+	margin-right: 10px
+
 .navbar-collapse
 	justify-content: flex-end
 
 .user-nav
 	position: relative
 	padding-right: 10px
-	&::after
-		content: ''
-		width: 1px
-		height: 15px
-		display: block
-		position: absolute
-		top: 40%
-		right: 0
-		padding: 0
-		background-color: #fff
 
 .other-nav
 	padding-left: 10px
@@ -116,6 +114,7 @@ button:focus
 	.user-nav
 		padding-right: 0
 		flex-direction: row
+		border-bottom: 1px solid #ffffff
 		&::after
 			width: 100%
 			height: 1px
@@ -125,12 +124,20 @@ button:focus
 	.user-nav .nav-item
 		width: 50%
 
+	.page-header
+		padding-left: 0
+		padding-right: 0
+
 	.other-nav
 		padding-left: 0
+
+	.nav-link
+		margin-right: 0
 
 .index-main
 	height: 100vh
 	background-color: #131313
+	overflow: hidden
 
 .index-section
 	color: #ffffff
@@ -139,35 +146,43 @@ button:focus
 .index-title
 	text-transform: uppercase
 	text-align: center
-	letter-spacing: 22px
+	letter-spacing: 8px
 	font-size: 48px
 	text-shadow: 2px 3px 0 rgba(0,0,0,0.2)
-
-.btn-index-start
-	text-transform: uppercase
-	background-color: #fff
-	border: 1px solid #ffffff
-	padding: 15px 50px
-	font-size: 16px
-	font-weight: 700
-	width: auto
-	border-radius: 50px
-	letter-spacing: 5px
-	color: #373544
-	transition: 0.4s
-	&:hover
-		background-color: rgba(255, 255, 255, 0.1)
-		color: #fff
-		text-decoration: none
 
 .index-sub-title
 	text-transform: uppercase
 	text-align: center
-	font-weight: 100
-	font-size: 24px
-	letter-spacing: 5px
+	font-weight: 400
+	font-size: 22px
+	letter-spacing: 3px
 	line-height: 1.3
-	text-shadow: rgba(119, 119, 119, 0.5) 0px 2px 0px
+
+.index-list
+	list-style: none
+	padding: 0
+	margin-top: 50px
+	max-width: 150px
+	margin-left: auto
+	margin-right: auto
+	text-transform: uppercase
+	font-size: 18px
+	font-weight: 400
+	span
+		width: 29px
+		height: 29px
+		padding: 7px
+		overflow: hidden
+		margin-right: 10px
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		background-color: #6e72f2
+		border-radius: 100%
+
+.index-list-item
+	margin-bottom: 20px
+	display: flex
 
 @media (max-width: 576px)
 	.index-title
@@ -177,10 +192,6 @@ button:focus
 	.index-sub-title
 		font-size: 16px
 
-	.btn-index-start
-		width: 100%
-		display: block
-		padding: 10px 25px
 
 .white-hr
 	background-color: #fff
@@ -193,9 +204,6 @@ button:focus
 	width: 100%
 	margin-top: 25px
 	margin-bottom: 25px
-
-.index-bottom
-	display: block
 
 .modal-content
 	border-radius: 15px
@@ -224,9 +232,8 @@ button:focus
 		background-color: #faffbd
 
 .btn
-	background-color: #383544
+	background-color: #624cec
 	color: #fff
-	border-radius: 25px
 	width: 100%
 	padding: 12px 20px
 	text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25)
@@ -234,8 +241,8 @@ button:focus
 	font-weight: 700
 	font-size: 16px
 	&:hover
-		background-color: #8C87A2
-		color: #fff
+		box-shadow: 0 10px 50px 0 #624cec
+		color: #ffffff	
 
 .reset-link
 	font-weight: 700
@@ -268,7 +275,6 @@ button:focus
 
 .panel
 	background-color: #fff
-	border-radius: 15px
 	box-shadow: 0 1px 10px 0 rgba(0,0,0,0.12)
 
 .order-tab-panel
@@ -514,7 +520,7 @@ textarea.mass-order-inp
 
 .notif-mail-form > .count > input,
 .notif-mail-form > .count > select
-	color: #333333
+	color: #624cec
 
 @media (max-width: 768px)
 	.btn-notif
@@ -530,7 +536,6 @@ textarea.mass-order-inp
 	background-color: #383544
 	height: 44px
 	width: 50px
-	border-radius: 2px
 	border: 1px solid transparent
 	display: inline-block
 	font-weight: 900
@@ -604,9 +609,6 @@ textarea.mass-order-inp
 	font-weight: 600
 	color: #333333
 
-input[type="radio"]
-	margin-right: 4px
-
 .badge-standart
 	font-size: 10px
 	background-color: #9b9b9b
@@ -659,9 +661,27 @@ input[type="radio"]
 	font-size: 14px
 	color: #666666
 
+.mode
+	display: flex
+
 .label-mode
-	margin-right: 20px
+	margin-right: 25px
 	margin-bottom: 5px
+	display: flex
+	align-items: center
+
+.radio-icon
+	width: 18px
+	height: 18px
+	padding: 2px
+	border: 1px solid #c0c0c0
+	border-radius: 50%
+	background-color: #ffffff
+	background-clip: content-box
+	margin-right: 4px
+
+input[type="radio"]:checked + .radio-icon
+	background-color: #7c43ff
 
 .money-tools
 	display: flex
@@ -676,7 +696,7 @@ input[type="radio"]
 	padding-right: 35px
 
 .money-tools > strong > span
-	color: #5a0b0b
+	color: #7c43ff
 
 .desc-panel
 	padding: 40px
@@ -733,7 +753,6 @@ $shadows-big:    multiple-box-shadow(100)
 
 html 
   height: 100%
-  overflow: hidden
   
 .stars
   background: transparent  

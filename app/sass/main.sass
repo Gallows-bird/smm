@@ -241,7 +241,7 @@ button:focus
 	font-weight: 700
 	font-size: 16px
 	&:hover
-		box-shadow: 0 10px 50px 0 #624cec
+		box-shadow: 0 5px 10px 0 #624cec
 		color: #ffffff	
 
 .reset-link
@@ -533,13 +533,13 @@ textarea.mass-order-inp
 	font-family: "Font Awesome 5 Free"
 
 .btn-search
-	background-color: #383544
+	background-color: #624cec
 	height: 44px
 	width: 50px
 	border: 1px solid transparent
 	display: inline-block
 	font-weight: 900
-	box-shadow: 2.5px 4.33px 10px 0px rgba(0, 0, 0, 0.13)
+	box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.13)
 	margin-left: -4px
 	padding: 0 6px
 	transition: 0.3s
@@ -742,41 +742,25 @@ input[type="radio"]:checked + .radio-icon
 // stars
 // n is number of stars required
 @function multiple-box-shadow ($n)   
-  $value: '#{random(2000)}px #{random(2000)}px #FFF' // height 
-  @for $i from 2 through $n
-    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+  $value: '#{random(2000)}px #{random(2000)}px 2px #fff' // height 
+  @for $i from 4 through $n
+    $value: '#{$value} , #{random(8000)}px #{random(2000)}px 2px #fff'
   @return unquote($value)
 
-$shadows-small:  multiple-box-shadow(700)
-$shadows-medium: multiple-box-shadow(200)
-$shadows-big:    multiple-box-shadow(100)
+$shadows-small:  multiple-box-shadow(1000)
+$shadows-medium: multiple-box-shadow(700)
+$shadows-big:    multiple-box-shadow(300)
 
 html 
   height: 100%
   
 .stars
-  background: transparent  
+  background: transparent
     
 #stars1
-  width: 1px
-  height: 1px
-  animation: animStar 50s linear infinite
-    
-  &:after
-    content: " "
-    position: absolute
-    top: 2000px
-    width: 1px
-    height: 1px
-    background: transparent
-    box-shadow: $shadows-small
-    
-#stars2
   width: 2px
   height: 2px
-  background: transparent
-  box-shadow: $shadows-medium
-  animation: animStar 100s linear infinite
+  animation: animStar 50s linear infinite
     
   &:after
     content: " "
@@ -785,11 +769,27 @@ html
     width: 2px
     height: 2px
     background: transparent
+    box-shadow: $shadows-small
+    
+#stars2
+  width: 4px
+  height: 4px
+  background: transparent
+  box-shadow: $shadows-medium
+  animation: animStar 100s linear infinite
+    
+  &:after
+    content: " "
+    position: absolute
+    top: 2000px
+    width: 4px
+    height: 4px
+    background: transparent
     box-shadow: $shadows-medium
     
 #stars3
-  width: 3px
-  height: 3px
+  width: 6px
+  height: 6px
   background: transparent
   box-shadow: $shadows-big
   animation: animStar 150s linear infinite
@@ -798,8 +798,8 @@ html
     content: " "
     position: absolute
     top: 2000px
-    width: 3px
-    height: 3px
+    width: 6px
+    height: 6px
     background: transparent
     box-shadow: $shadows-big
     

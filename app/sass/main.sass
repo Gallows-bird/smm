@@ -25,8 +25,6 @@ button:focus
 	width: 100%
 	z-index: 1
 	top: 0
-	padding-left: 50px
-	padding-right: 50px
 
 .nav-toggle
 	width: 36px
@@ -96,6 +94,9 @@ button:focus
 		color: #fff
 		background-color: #6e72f2
 		transition: all 0.3s
+
+.navbar-nav .nav-link
+	margin-right: 0
 
 .nav-link img
 	margin-right: 10px
@@ -741,73 +742,73 @@ input[type="radio"]:checked + .radio-icon
 
 // stars
 // n is number of stars required
-@function multiple-box-shadow ($n)   
-  $value: '#{random(2000)}px #{random(2000)}px 2px #fff' // height 
-  @for $i from 4 through $n
-    $value: '#{$value} , #{random(8000)}px #{random(2000)}px 2px #fff'
-  @return unquote($value)
+@function multiple-box-shadow ($n)
+	$value: '#{random(2000)}px #{random(2000)}px 2px #fff' // height 
+	@for $i from 4 through $n
+		$value: '#{$value} , #{random(8000)}px #{random(2000)}px 2px #fff'
+	@return unquote($value)
 
 $shadows-small:  multiple-box-shadow(1000)
 $shadows-medium: multiple-box-shadow(700)
 $shadows-big:    multiple-box-shadow(300)
 
 html 
-  height: 100%
+	height: 100%
   
 .stars
-  background: transparent
+	background: transparent
     
 #stars1
-  width: 2px
-  height: 2px
-  animation: animStar 50s linear infinite
+	width: 2px
+	height: 2px
+	animation: animStar 50s linear infinite
     
-  &:after
-    content: " "
-    position: absolute
-    top: 2000px
-    width: 2px
-    height: 2px
-    background: transparent
-    box-shadow: $shadows-small
+	&:after
+		content: " "
+		position: absolute
+		top: 2000px
+		width: 2px
+		height: 2px
+		background: transparent
+		box-shadow: $shadows-small
     
 #stars2
-  width: 4px
-  height: 4px
-  background: transparent
-  box-shadow: $shadows-medium
-  animation: animStar 100s linear infinite
+	width: 4px
+	height: 4px
+	background: transparent
+	box-shadow: $shadows-medium
+	animation: animStar 100s linear infinite
     
-  &:after
-    content: " "
-    position: absolute
-    top: 2000px
-    width: 4px
-    height: 4px
-    background: transparent
-    box-shadow: $shadows-medium
+	&:after
+		content: " "
+		position: absolute
+		top: 2000px
+		width: 4px
+		height: 4px
+		background: transparent
+		box-shadow: $shadows-medium
     
 #stars3
-  width: 6px
-  height: 6px
-  background: transparent
-  box-shadow: $shadows-big
-  animation: animStar 150s linear infinite
+	width: 6px
+	height: 6px
+	background: transparent
+	box-shadow: $shadows-big
+	animation: animStar 150s linear infinite
     
-  &:after
-    content: " "
-    position: absolute
-    top: 2000px
-    width: 6px
-    height: 6px
-    background: transparent
-    box-shadow: $shadows-big
+	&:after
+		content: " "
+		position: absolute
+		top: 2000px
+		width: 6px
+		height: 6px
+		background: transparent
+		box-shadow: $shadows-big
     
 @keyframes animStar
-  from	
-    transform: translateY(0px)
-  to		
-    transform: translateY(-2000px)
+	from
+		transform: translateY(0px)
+	to
+		transform: translateY(-2000px)
     
 // stars end
 
@@ -815,3 +816,31 @@ html
 #Capa_1
 	width: 82px
 	height: 54px
+
+.dropdown-item
+	padding-left: 15px
+	padding-right: 15px
+	border: 1px solid #ffffff
+	font-size: 14px
+	margin-top: 5px
+	margin-bottom: 5px
+	border-radius: 25px
+	color: #ffffff
+	white-space: pre-line
+	&:hover
+		color: #fff
+		background-color: #6e72f2
+		transition: all 0.3s
+
+.dropdown-menu
+	padding: 25px 25px
+	width: 250px
+	background-color: #131313
+	border: none
+
+@media (max-width: 991px)
+	.user-nav .dropdown .dropdown-menu
+		width: 200%
+
+	.dropdown-menu
+		width: 100%
